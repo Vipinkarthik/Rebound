@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Runtime and generated data
+coverage/
+tmp/
+temp/
+logs/
+
+# IDE and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
