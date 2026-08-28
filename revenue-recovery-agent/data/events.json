@@ -1,0 +1,4802 @@
+[
+  {
+    "event_id": "evt_48527e097397",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T23:24:53.129874",
+    "payload": {
+      "payment_id": "pay_c73588aaf09c44",
+      "order_id": "order_f4ee3f694beb41",
+      "customer_id": "cust_0087",
+      "customer_opted_out": false,
+      "amount": 1319.51,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_213a4697a87b",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T07:32:53.129874",
+    "payload": {
+      "payment_id": "pay_397c51ba568241",
+      "order_id": "order_77d77bd691d54b",
+      "customer_id": "cust_0030",
+      "customer_opted_out": false,
+      "amount": 4093.95,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_b2ddfd7369fc",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T04:07:53.129874",
+    "payload": {
+      "payment_id": "pay_a6a074a384ac43",
+      "order_id": "order_45770eb209ba4c",
+      "customer_id": "cust_0029",
+      "customer_opted_out": false,
+      "amount": 25343.34,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_fc414e3f17e3",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T03:41:53.129874",
+    "payload": {
+      "payment_id": "pay_eb1a60ddeb7c47",
+      "order_id": "order_de17d1cc74cd45",
+      "customer_id": "cust_0044",
+      "customer_opted_out": true,
+      "amount": 36462.29,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_50006036c1e6",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T09:31:53.129874",
+    "payload": {
+      "payment_id": "pay_390b9c8b90144a",
+      "order_id": "order_9c04ca9b1d344d",
+      "customer_id": "cust_0013",
+      "customer_opted_out": false,
+      "amount": 9845.27,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_58729b449dce",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T20:21:53.129874",
+    "payload": {
+      "payment_id": "pay_2a7238cc627044",
+      "order_id": "order_0abb2127abed45",
+      "customer_id": "cust_0119",
+      "customer_opted_out": false,
+      "amount": 27246.53,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_e0c8521bf829",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T12:01:53.129874",
+    "payload": {
+      "payment_id": "pay_35880abef97c42",
+      "order_id": "order_4fdb71ba624a41",
+      "customer_id": "cust_0074",
+      "customer_opted_out": false,
+      "amount": 24930.97,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_3026a6cf0192",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T02:30:53.129874",
+    "payload": {
+      "payment_id": "pay_b42be5ef71a649",
+      "order_id": "order_c57d6e7c2c124d",
+      "customer_id": "cust_0110",
+      "customer_opted_out": false,
+      "amount": 3315.14,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_5f9ee77ae075",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T15:11:53.129874",
+    "payload": {
+      "payment_id": "pay_6884eeae04c64c",
+      "order_id": "order_eb37d7c93d1a49",
+      "customer_id": "cust_0048",
+      "customer_opted_out": false,
+      "amount": 17229.04,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_97289f2fe40b",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T03:39:53.129874",
+    "payload": {
+      "payment_id": "pay_373680a09f1c4d",
+      "order_id": "order_5d5a095bb94e46",
+      "customer_id": "cust_0078",
+      "customer_opted_out": false,
+      "amount": 30223.52,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_0bcbc597a91d",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T00:32:53.129874",
+    "payload": {
+      "payment_id": "pay_e47007c904984c",
+      "order_id": "order_6de28ff8080c42",
+      "customer_id": "cust_0119",
+      "customer_opted_out": false,
+      "amount": 24129.0,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_4f089f36991f",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T05:45:53.129874",
+    "payload": {
+      "payment_id": "pay_b7bfd975b8ce41",
+      "order_id": "order_90ca7d3835734a",
+      "customer_id": "cust_0030",
+      "customer_opted_out": false,
+      "amount": 25150.91,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_7a4e5f373de0",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T18:26:53.129874",
+    "payload": {
+      "payment_id": "pay_e8831a72a13147",
+      "order_id": "order_369e18043afa43",
+      "customer_id": "cust_0028",
+      "customer_opted_out": false,
+      "amount": 18171.58,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_fd05ea71e058",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T01:14:53.129874",
+    "payload": {
+      "payment_id": "pay_37b6a68553a448",
+      "order_id": "order_cf8ef06e0f1443",
+      "customer_id": "cust_0018",
+      "customer_opted_out": false,
+      "amount": 17923.7,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_3732a111b907",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T06:52:53.129874",
+    "payload": {
+      "payment_id": "pay_495221c56d764b",
+      "order_id": "order_f4f6ce6567f646",
+      "customer_id": "cust_0047",
+      "customer_opted_out": false,
+      "amount": 25348.85,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_0d455f0769a2",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T22:25:53.129874",
+    "payload": {
+      "payment_id": "pay_d555620ad5aa48",
+      "order_id": "order_e93b4882f6724a",
+      "customer_id": "cust_0020",
+      "customer_opted_out": false,
+      "amount": 23026.29,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_a8e46771db17",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T09:17:53.129874",
+    "payload": {
+      "payment_id": "pay_9e117c7573a041",
+      "order_id": "order_ace45c0f490d44",
+      "customer_id": "cust_0077",
+      "customer_opted_out": false,
+      "amount": 35684.95,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_8ce773f88cee",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T21:45:53.129874",
+    "payload": {
+      "payment_id": "pay_844d124788d143",
+      "order_id": "order_1dad716d1b1f40",
+      "customer_id": "cust_0088",
+      "customer_opted_out": false,
+      "amount": 43704.28,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_7e3884a518c2",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T15:48:53.129874",
+    "payload": {
+      "payment_id": "pay_66df19fb226442",
+      "order_id": "order_fb07fee8bd3642",
+      "customer_id": "cust_0059",
+      "customer_opted_out": false,
+      "amount": 34632.99,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_ec45995bbd8d",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T13:00:53.129874",
+    "payload": {
+      "payment_id": "pay_d4aaf4e900b042",
+      "order_id": "order_4c8ca5bef50640",
+      "customer_id": "cust_0065",
+      "customer_opted_out": false,
+      "amount": 39438.09,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined - low balance",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_cea0e6a8b0ba",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T16:31:53.129874",
+    "payload": {
+      "payment_id": "pay_d4ba9b4f859041",
+      "order_id": "order_a02e64dd2d6b4e",
+      "customer_id": "cust_0048",
+      "customer_opted_out": false,
+      "amount": 13569.63,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined - low balance",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_ea8a2866e510",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T17:08:53.129874",
+    "payload": {
+      "payment_id": "pay_bee97d3c44ef4e",
+      "order_id": "order_74807cd8376d4c",
+      "customer_id": "cust_0063",
+      "customer_opted_out": false,
+      "amount": 42916.74,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_f184493c4f53",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T19:24:53.129874",
+    "payload": {
+      "payment_id": "pay_e70cf2f9d0744a",
+      "order_id": "order_ded169257c9846",
+      "customer_id": "cust_0031",
+      "customer_opted_out": false,
+      "amount": 41823.55,
+      "currency": "INR",
+      "raw_error_description": "Insufficient balance in account",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_ef54dc02d019",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T19:02:53.129874",
+    "payload": {
+      "payment_id": "pay_a0d5da0fd68a49",
+      "order_id": "order_101a44f28d8b41",
+      "customer_id": "cust_0105",
+      "customer_opted_out": false,
+      "amount": 39534.71,
+      "currency": "INR",
+      "raw_error_description": "Insufficient balance in account",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_c04b24ce2408",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T14:51:53.129874",
+    "payload": {
+      "payment_id": "pay_226a4397138349",
+      "order_id": "order_3170ffe08fd142",
+      "customer_id": "cust_0034",
+      "customer_opted_out": false,
+      "amount": 34509.15,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined - low balance",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_4737111bb7c5",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T09:56:53.129874",
+    "payload": {
+      "payment_id": "pay_89655160a2c346",
+      "order_id": "order_59a8ae4fa6c44d",
+      "customer_id": "cust_0092",
+      "customer_opted_out": false,
+      "amount": 43403.42,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_7cbd2a1b36b8",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T14:44:53.129874",
+    "payload": {
+      "payment_id": "pay_f50be17a48e344",
+      "order_id": "order_54fc98a1e66c47",
+      "customer_id": "cust_0058",
+      "customer_opted_out": false,
+      "amount": 44782.69,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_c09fdde9ef87",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T05:58:53.129874",
+    "payload": {
+      "payment_id": "pay_477f121ed9974f",
+      "order_id": "order_5422829ed42549",
+      "customer_id": "cust_0076",
+      "customer_opted_out": false,
+      "amount": 10265.67,
+      "currency": "INR",
+      "raw_error_description": "Insufficient balance in account",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_903e33005ba5",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T09:06:53.129874",
+    "payload": {
+      "payment_id": "pay_1d794e95923040",
+      "order_id": "order_9eda07692ef042",
+      "customer_id": "cust_0111",
+      "customer_opted_out": false,
+      "amount": 3379.56,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_6ef3353705c5",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T19:20:53.129874",
+    "payload": {
+      "payment_id": "pay_742bbf1a3dc640",
+      "order_id": "order_945f5bfaec934f",
+      "customer_id": "cust_0093",
+      "customer_opted_out": false,
+      "amount": 23233.71,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_6c198639b9ef",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T00:31:53.129874",
+    "payload": {
+      "payment_id": "pay_fd342f07596447",
+      "order_id": "order_4fb8907183e148",
+      "customer_id": "cust_0013",
+      "customer_opted_out": false,
+      "amount": 11085.52,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_b2bcdb660aa0",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T06:00:53.129874",
+    "payload": {
+      "payment_id": "pay_877dbf6ee7524c",
+      "order_id": "order_eb0c95ed6bc841",
+      "customer_id": "cust_0087",
+      "customer_opted_out": false,
+      "amount": 16071.89,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_db310b8a6904",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T22:28:53.129874",
+    "payload": {
+      "payment_id": "pay_225b438f736b44",
+      "order_id": "order_08572e8912bb48",
+      "customer_id": "cust_0032",
+      "customer_opted_out": false,
+      "amount": 4608.22,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_4aa63bd09bd8",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T22:14:53.129874",
+    "payload": {
+      "payment_id": "pay_8e00ab92888f4c",
+      "order_id": "order_95869f0d9d6049",
+      "customer_id": "cust_0032",
+      "customer_opted_out": false,
+      "amount": 24225.14,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_4daccbb0a5aa",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T11:23:53.129874",
+    "payload": {
+      "payment_id": "pay_fbea879d118f45",
+      "order_id": "order_041d51403dbd41",
+      "customer_id": "cust_0012",
+      "customer_opted_out": false,
+      "amount": 36399.2,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_c03872d223c1",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T05:23:53.129874",
+    "payload": {
+      "payment_id": "pay_32c4e262b22940",
+      "order_id": "order_8a64af0257e94f",
+      "customer_id": "cust_0022",
+      "customer_opted_out": false,
+      "amount": 18406.76,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_9a88809b2bf1",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T23:16:53.129874",
+    "payload": {
+      "payment_id": "pay_1f30d09de20749",
+      "order_id": "order_a72b289c13794f",
+      "customer_id": "cust_0037",
+      "customer_opted_out": false,
+      "amount": 44341.82,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_e285411b12b4",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T05:04:53.129874",
+    "payload": {
+      "payment_id": "pay_7e3b1b1de16b46",
+      "order_id": "order_ff00cd5cd8d344",
+      "customer_id": "cust_0096",
+      "customer_opted_out": false,
+      "amount": 7134.05,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 3
+    }
+  },
+  {
+    "event_id": "evt_eb431d9881cf",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T15:54:53.129874",
+    "payload": {
+      "payment_id": "pay_46cc6e718bc94f",
+      "order_id": "order_e33ec0c7efe54b",
+      "customer_id": "cust_0008",
+      "customer_opted_out": false,
+      "amount": 2445.43,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_f1bc6f0aee06",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T05:17:53.129874",
+    "payload": {
+      "payment_id": "pay_b843a6303c7443",
+      "order_id": "order_df319567dc164b",
+      "customer_id": "cust_0052",
+      "customer_opted_out": false,
+      "amount": 38340.0,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_c80a87f9d96a",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T04:09:53.129874",
+    "payload": {
+      "payment_id": "pay_1e3054d5373448",
+      "order_id": "order_e3c3174edeee47",
+      "customer_id": "cust_0085",
+      "customer_opted_out": false,
+      "amount": 11229.69,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined - low balance",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_5e5191496290",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T04:48:53.129874",
+    "payload": {
+      "payment_id": "pay_baf603e2d1f34e",
+      "order_id": "order_2d493909c30d46",
+      "customer_id": "cust_0034",
+      "customer_opted_out": false,
+      "amount": 42074.78,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_3589f3183e24",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T03:29:53.129874",
+    "payload": {
+      "payment_id": "pay_5cd28552dcf648",
+      "order_id": "order_7fd4b755beb74a",
+      "customer_id": "cust_0002",
+      "customer_opted_out": false,
+      "amount": 30291.39,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_bf16a132ee01",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T13:44:53.129874",
+    "payload": {
+      "payment_id": "pay_84dd23e894f34a",
+      "order_id": "order_a24efd921a664d",
+      "customer_id": "cust_0113",
+      "customer_opted_out": false,
+      "amount": 3481.15,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_15671f30c745",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T20:05:53.129874",
+    "payload": {
+      "payment_id": "pay_d1aa00c531ac43",
+      "order_id": "order_eb6e82a2377147",
+      "customer_id": "cust_0079",
+      "customer_opted_out": false,
+      "amount": 16754.18,
+      "currency": "INR",
+      "raw_error_description": "Insufficient balance in account",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_d8bf7a2b5aff",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T23:15:53.129874",
+    "payload": {
+      "payment_id": "pay_6e71b7d549e54f",
+      "order_id": "order_d9e4ebdba15242",
+      "customer_id": "cust_0113",
+      "customer_opted_out": false,
+      "amount": 549.48,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_9c9fbee96860",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T00:12:53.129874",
+    "payload": {
+      "payment_id": "pay_18e3739862b047",
+      "order_id": "order_d714c0d0ab4a49",
+      "customer_id": "cust_0037",
+      "customer_opted_out": false,
+      "amount": 5370.32,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_f254e21b0cbf",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T01:21:53.129874",
+    "payload": {
+      "payment_id": "pay_e3829f0a9b6d4b",
+      "order_id": "order_3df786ae425e43",
+      "customer_id": "cust_0065",
+      "customer_opted_out": false,
+      "amount": 32348.74,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_194c339290f9",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T03:34:53.129874",
+    "payload": {
+      "payment_id": "pay_10ee3dba063445",
+      "order_id": "order_d1769e3ac82846",
+      "customer_id": "cust_0107",
+      "customer_opted_out": false,
+      "amount": 40758.98,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_a914d8fc5586",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T01:38:53.129874",
+    "payload": {
+      "payment_id": "pay_d50f9205d2aa4f",
+      "order_id": "order_d0259e07992542",
+      "customer_id": "cust_0021",
+      "customer_opted_out": false,
+      "amount": 357.85,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_3e8b1163546e",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T03:07:53.129874",
+    "payload": {
+      "payment_id": "pay_508aee92506548",
+      "order_id": "order_74742c8ae82846",
+      "customer_id": "cust_0114",
+      "customer_opted_out": false,
+      "amount": 24914.83,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_0def171505bb",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T17:10:53.129874",
+    "payload": {
+      "payment_id": "pay_58fc06ddd4344d",
+      "order_id": "order_a12780f1061d46",
+      "customer_id": "cust_0056",
+      "customer_opted_out": false,
+      "amount": 24641.99,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_4a9c33ba4c24",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T07:57:53.129874",
+    "payload": {
+      "payment_id": "pay_ed2d145e3dd140",
+      "order_id": "order_316b1d6b372b47",
+      "customer_id": "cust_0116",
+      "customer_opted_out": false,
+      "amount": 14009.28,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_40d2ec51e9a8",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T05:54:53.129874",
+    "payload": {
+      "payment_id": "pay_c3c7cff77cb442",
+      "order_id": "order_796d16472b814c",
+      "customer_id": "cust_0080",
+      "customer_opted_out": false,
+      "amount": 30756.27,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_db220d56ee07",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T13:13:53.129874",
+    "payload": {
+      "payment_id": "pay_1d046059e0e74f",
+      "order_id": "order_0f5ca14f49584b",
+      "customer_id": "cust_0113",
+      "customer_opted_out": false,
+      "amount": 41674.15,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_ecadf629fae0",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T05:11:53.129874",
+    "payload": {
+      "payment_id": "pay_c7bc1d6320e04c",
+      "order_id": "order_11af30640fe742",
+      "customer_id": "cust_0103",
+      "customer_opted_out": false,
+      "amount": 8234.54,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_16148a8d02b6",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T22:38:53.129874",
+    "payload": {
+      "payment_id": "pay_6c8d095f7f494f",
+      "order_id": "order_8737de659ead43",
+      "customer_id": "cust_0049",
+      "customer_opted_out": false,
+      "amount": 36521.38,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_f1fed3f88759",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T19:43:53.129874",
+    "payload": {
+      "payment_id": "pay_58af32a0f81742",
+      "order_id": "order_e4b84da2184845",
+      "customer_id": "cust_0106",
+      "customer_opted_out": false,
+      "amount": 10164.25,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_52a29541faa9",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T03:55:53.129874",
+    "payload": {
+      "payment_id": "pay_b75a373804444d",
+      "order_id": "order_29136d60b7bf4b",
+      "customer_id": "cust_0099",
+      "customer_opted_out": false,
+      "amount": 1259.19,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_3fbf30b35cb4",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T16:11:53.129874",
+    "payload": {
+      "payment_id": "pay_0c60fdb690444e",
+      "order_id": "order_f67c91a795f74a",
+      "customer_id": "cust_0004",
+      "customer_opted_out": false,
+      "amount": 28938.02,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 3
+    }
+  },
+  {
+    "event_id": "evt_35a8a35deae2",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T22:35:53.129874",
+    "payload": {
+      "payment_id": "pay_b011bf1d56974b",
+      "order_id": "order_2ad846f7ac034f",
+      "customer_id": "cust_0077",
+      "customer_opted_out": false,
+      "amount": 8199.02,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_33c176b0f1e1",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T15:34:53.129874",
+    "payload": {
+      "payment_id": "pay_3170f0249aeb48",
+      "order_id": "order_d3da214a038c4a",
+      "customer_id": "cust_0015",
+      "customer_opted_out": false,
+      "amount": 32838.55,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_9bb591d7f7db",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T10:29:53.129874",
+    "payload": {
+      "payment_id": "pay_e02a178a319b49",
+      "order_id": "order_cb3ed02082134c",
+      "customer_id": "cust_0047",
+      "customer_opted_out": false,
+      "amount": 11610.82,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_befe1fa83801",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T20:23:53.129874",
+    "payload": {
+      "payment_id": "pay_b11d32e4a7c440",
+      "order_id": "order_d0f9b6165c1d46",
+      "customer_id": "cust_0093",
+      "customer_opted_out": false,
+      "amount": 42709.53,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_4308f84d9b34",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T20:01:53.129874",
+    "payload": {
+      "payment_id": "pay_965904dc1b9749",
+      "order_id": "order_47d2df48fecb47",
+      "customer_id": "cust_0025",
+      "customer_opted_out": false,
+      "amount": 30076.47,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_39f683e244d0",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T20:18:53.129874",
+    "payload": {
+      "payment_id": "pay_84d07430618c4f",
+      "order_id": "order_f804283b549c41",
+      "customer_id": "cust_0052",
+      "customer_opted_out": false,
+      "amount": 30543.52,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d195ee506b90",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T17:24:53.129874",
+    "payload": {
+      "payment_id": "pay_b384f58ccaab4c",
+      "order_id": "order_4c42cb6715174a",
+      "customer_id": "cust_0060",
+      "customer_opted_out": false,
+      "amount": 13812.9,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_4016a3e7810b",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T14:13:53.129874",
+    "payload": {
+      "payment_id": "pay_46cf6e640c204d",
+      "order_id": "order_7af1ef4185054c",
+      "customer_id": "cust_0085",
+      "customer_opted_out": false,
+      "amount": 30467.78,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_33990c4b3acd",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T05:19:53.129874",
+    "payload": {
+      "payment_id": "pay_a1970b3c7d9447",
+      "order_id": "order_e66a9b80594d42",
+      "customer_id": "cust_0087",
+      "customer_opted_out": false,
+      "amount": 23291.77,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d062aa2e4001",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T20:31:53.129874",
+    "payload": {
+      "payment_id": "pay_5c72fd2a00f345",
+      "order_id": "order_81b06b4b59984e",
+      "customer_id": "cust_0079",
+      "customer_opted_out": false,
+      "amount": 36333.82,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_6e3a1f9b0014",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T08:58:53.129874",
+    "payload": {
+      "payment_id": "pay_35edba4fdd514a",
+      "order_id": "order_4a7b6dc1e25445",
+      "customer_id": "cust_0064",
+      "customer_opted_out": false,
+      "amount": 18766.37,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_8f382433fe62",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T22:50:53.129874",
+    "payload": {
+      "payment_id": "pay_ba8d988955ba49",
+      "order_id": "order_476afd3750c94e",
+      "customer_id": "cust_0100",
+      "customer_opted_out": false,
+      "amount": 6810.34,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_06a1df48f1ac",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T06:32:53.129874",
+    "payload": {
+      "payment_id": "pay_70af362597d446",
+      "order_id": "order_2872097adaae49",
+      "customer_id": "cust_0072",
+      "customer_opted_out": false,
+      "amount": 8078.9,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_16d9dde45296",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T18:04:53.129874",
+    "payload": {
+      "payment_id": "pay_5e579d00fcd849",
+      "order_id": "order_384f06b0059f4a",
+      "customer_id": "cust_0097",
+      "customer_opted_out": false,
+      "amount": 20648.95,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_fa1da04af6df",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T20:35:53.129874",
+    "payload": {
+      "payment_id": "pay_d61a0272176744",
+      "order_id": "order_5aebc810c63240",
+      "customer_id": "cust_0058",
+      "customer_opted_out": false,
+      "amount": 37409.33,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_bc8e36a9672f",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T19:14:53.129874",
+    "payload": {
+      "payment_id": "pay_3d76f84cb3524b",
+      "order_id": "order_2f000a810a174f",
+      "customer_id": "cust_0081",
+      "customer_opted_out": false,
+      "amount": 37825.7,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_ee28098b35eb",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T15:32:53.129874",
+    "payload": {
+      "payment_id": "pay_38b33c768ef443",
+      "order_id": "order_720f5c93bfd349",
+      "customer_id": "cust_0041",
+      "customer_opted_out": false,
+      "amount": 19905.73,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_116fa6a6b1fe",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T08:11:53.129874",
+    "payload": {
+      "payment_id": "pay_a290bf6545b44d",
+      "order_id": "order_dd1caa8cd41a43",
+      "customer_id": "cust_0009",
+      "customer_opted_out": false,
+      "amount": 6398.3,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d2e2d1c8efe0",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T04:02:53.129874",
+    "payload": {
+      "payment_id": "pay_97f1446c61a64a",
+      "order_id": "order_99dcff15af794c",
+      "customer_id": "cust_0050",
+      "customer_opted_out": false,
+      "amount": 15022.82,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_1962344bf098",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T12:35:53.129874",
+    "payload": {
+      "payment_id": "pay_fa2d9c5f7ae146",
+      "order_id": "order_636c2b4c47b84e",
+      "customer_id": "cust_0046",
+      "customer_opted_out": false,
+      "amount": 38581.45,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_c2813544f8a2",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T07:17:53.129874",
+    "payload": {
+      "payment_id": "pay_1d444eca284841",
+      "order_id": "order_adc144a4458241",
+      "customer_id": "cust_0063",
+      "customer_opted_out": false,
+      "amount": 38434.32,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_394cfdb9c741",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T06:11:53.129874",
+    "payload": {
+      "payment_id": "pay_36c7dfc722504e",
+      "order_id": "order_badaa8f721124e",
+      "customer_id": "cust_0093",
+      "customer_opted_out": true,
+      "amount": 19724.89,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_08bc5fe443df",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T07:36:53.129874",
+    "payload": {
+      "payment_id": "pay_6aaf84ce487749",
+      "order_id": "order_316a5e8468f14b",
+      "customer_id": "cust_0076",
+      "customer_opted_out": false,
+      "amount": 41395.38,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_7142c748d783",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T12:35:53.129874",
+    "payload": {
+      "payment_id": "pay_364f2b0665824f",
+      "order_id": "order_055570605cf346",
+      "customer_id": "cust_0007",
+      "customer_opted_out": false,
+      "amount": 3959.93,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_79e170f81979",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T09:38:53.129874",
+    "payload": {
+      "payment_id": "pay_e9a1c2dae0ec4e",
+      "order_id": "order_ab79564dc66746",
+      "customer_id": "cust_0036",
+      "customer_opted_out": false,
+      "amount": 14864.73,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_1fbe3a86ad47",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T06:17:53.129874",
+    "payload": {
+      "payment_id": "pay_4d78225862574f",
+      "order_id": "order_e5128c58ce324b",
+      "customer_id": "cust_0045",
+      "customer_opted_out": false,
+      "amount": 37603.84,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_2e35670c8740",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T09:09:53.129874",
+    "payload": {
+      "payment_id": "pay_b71c3af8764844",
+      "order_id": "order_599d7d881f5f46",
+      "customer_id": "cust_0032",
+      "customer_opted_out": false,
+      "amount": 3273.17,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_e3d163dfbd09",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T21:46:53.129874",
+    "payload": {
+      "payment_id": "pay_80289884533042",
+      "order_id": "order_21339ae2e2a84e",
+      "customer_id": "cust_0073",
+      "customer_opted_out": false,
+      "amount": 28035.46,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_29d69120088f",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T21:45:53.129874",
+    "payload": {
+      "payment_id": "pay_058fd78a988940",
+      "order_id": "order_0b705c25f69349",
+      "customer_id": "cust_0100",
+      "customer_opted_out": false,
+      "amount": 31535.73,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_822475a59ace",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T10:09:53.129874",
+    "payload": {
+      "payment_id": "pay_8b9ccb54b0ba4a",
+      "order_id": "order_0ccd7e87698640",
+      "customer_id": "cust_0051",
+      "customer_opted_out": true,
+      "amount": 5041.93,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_85c430e69e08",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T23:29:53.129874",
+    "payload": {
+      "payment_id": "pay_c2ec8ab6eacc48",
+      "order_id": "order_4cbddcc53dec4f",
+      "customer_id": "cust_0090",
+      "customer_opted_out": false,
+      "amount": 3603.72,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_35ed773e3b46",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T02:54:53.129874",
+    "payload": {
+      "payment_id": "pay_d3d410aba9e449",
+      "order_id": "order_daf6050f0d284f",
+      "customer_id": "cust_0085",
+      "customer_opted_out": false,
+      "amount": 35870.78,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_5521b4a56e45",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T18:28:53.129874",
+    "payload": {
+      "payment_id": "pay_9fe5a37ad41343",
+      "order_id": "order_b9a08f17b0f740",
+      "customer_id": "cust_0014",
+      "customer_opted_out": false,
+      "amount": 22866.55,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_a7f18f28c743",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T01:56:53.129874",
+    "payload": {
+      "payment_id": "pay_6e332e9902f645",
+      "order_id": "order_2e829dddbd4148",
+      "customer_id": "cust_0023",
+      "customer_opted_out": false,
+      "amount": 28673.85,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_15d8f8b245bc",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T19:23:53.129874",
+    "payload": {
+      "payment_id": "pay_94ca1b649e4041",
+      "order_id": "order_367295b8aaac49",
+      "customer_id": "cust_0060",
+      "customer_opted_out": false,
+      "amount": 43453.19,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_579cb65bcc5b",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T23:19:53.129874",
+    "payload": {
+      "payment_id": "pay_4f6f1dfe55ff48",
+      "order_id": "order_cba75412e6074e",
+      "customer_id": "cust_0113",
+      "customer_opted_out": false,
+      "amount": 14638.57,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_ed2b314e21a9",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T15:28:53.129874",
+    "payload": {
+      "payment_id": "pay_411c75c56acd49",
+      "order_id": "order_7be67d1ba33640",
+      "customer_id": "cust_0004",
+      "customer_opted_out": false,
+      "amount": 33821.09,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_69b64bb19e65",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T14:55:53.129874",
+    "payload": {
+      "payment_id": "pay_d59ed2ee1f644b",
+      "order_id": "order_5146666098774e",
+      "customer_id": "cust_0036",
+      "customer_opted_out": false,
+      "amount": 8345.61,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_1117733df955",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T04:26:53.129874",
+    "payload": {
+      "payment_id": "pay_922372d5857f46",
+      "order_id": "order_329da5953c084e",
+      "customer_id": "cust_0093",
+      "customer_opted_out": false,
+      "amount": 25098.99,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_0be3d23d7d66",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T18:23:53.129874",
+    "payload": {
+      "payment_id": "pay_1a85fa3f9c1e47",
+      "order_id": "order_84e69538e69f40",
+      "customer_id": "cust_0058",
+      "customer_opted_out": false,
+      "amount": 25071.45,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_eaa8e8eef7ab",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T11:00:53.129874",
+    "payload": {
+      "payment_id": "pay_5c7dd8790fc146",
+      "order_id": "order_81680a09e17941",
+      "customer_id": "cust_0061",
+      "customer_opted_out": false,
+      "amount": 13381.05,
+      "currency": "INR",
+      "raw_error_description": "Insufficient balance in account",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_799b71dfade1",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T23:26:53.129874",
+    "payload": {
+      "payment_id": "pay_b0ad5bcf18d045",
+      "order_id": "order_4b15a253343645",
+      "customer_id": "cust_0035",
+      "customer_opted_out": false,
+      "amount": 19262.0,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_a93014814165",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T12:07:53.129874",
+    "payload": {
+      "payment_id": "pay_10be1b76e35b4c",
+      "order_id": "order_aca5d5c5a78a4c",
+      "customer_id": "cust_0025",
+      "customer_opted_out": false,
+      "amount": 10527.33,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_525206c2b0ba",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T13:46:53.129874",
+    "payload": {
+      "payment_id": "pay_89e5c9ba8a2640",
+      "order_id": "order_b14b77c46c7644",
+      "customer_id": "cust_0077",
+      "customer_opted_out": false,
+      "amount": 21891.58,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 3
+    }
+  },
+  {
+    "event_id": "evt_693eb2f0d6de",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T20:07:53.129874",
+    "payload": {
+      "payment_id": "pay_44158e5f6bf24a",
+      "order_id": "order_3297c1386ba241",
+      "customer_id": "cust_0002",
+      "customer_opted_out": false,
+      "amount": 37501.58,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_eae76e7a0d92",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T21:30:53.129874",
+    "payload": {
+      "payment_id": "pay_adb34dc5e04d43",
+      "order_id": "order_72321d76bb004e",
+      "customer_id": "cust_0090",
+      "customer_opted_out": true,
+      "amount": 5870.04,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d4431424b58b",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T22:34:53.129874",
+    "payload": {
+      "payment_id": "pay_af812ca4ecfe45",
+      "order_id": "order_1065cbfd0f9a46",
+      "customer_id": "cust_0061",
+      "customer_opted_out": false,
+      "amount": 39106.93,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_415a7faaddd2",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T20:10:53.129874",
+    "payload": {
+      "payment_id": "pay_45f0b52cc7ce48",
+      "order_id": "order_a31e37c9641744",
+      "customer_id": "cust_0015",
+      "customer_opted_out": false,
+      "amount": 15462.97,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_ffefd4be91d9",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T16:41:53.129874",
+    "payload": {
+      "payment_id": "pay_1976237dabf449",
+      "order_id": "order_6cf9d04ddafc46",
+      "customer_id": "cust_0020",
+      "customer_opted_out": false,
+      "amount": 22229.74,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_c4a86626f1a4",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T04:34:53.129874",
+    "payload": {
+      "payment_id": "pay_b6344751628c40",
+      "order_id": "order_6dfac5394e9d4c",
+      "customer_id": "cust_0078",
+      "customer_opted_out": false,
+      "amount": 4015.19,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_8ad17d8d6474",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T20:48:53.129874",
+    "payload": {
+      "payment_id": "pay_323b63c4a33a46",
+      "order_id": "order_3233ac1c9a674b",
+      "customer_id": "cust_0111",
+      "customer_opted_out": false,
+      "amount": 34950.85,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_86d65575ed1c",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T23:51:53.129874",
+    "payload": {
+      "payment_id": "pay_b93bdc94c06b4c",
+      "order_id": "order_cdd50e1ddab142",
+      "customer_id": "cust_0098",
+      "customer_opted_out": false,
+      "amount": 13880.34,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_00565b77aa82",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T13:40:53.129874",
+    "payload": {
+      "payment_id": "pay_9e7dad80bb5944",
+      "order_id": "order_a92ffe9cb6af4a",
+      "customer_id": "cust_0071",
+      "customer_opted_out": false,
+      "amount": 9653.14,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_8510f9d70c5f",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T21:38:53.129874",
+    "payload": {
+      "payment_id": "pay_31fd0cf0f0b747",
+      "order_id": "order_b19b9f981cd24b",
+      "customer_id": "cust_0005",
+      "customer_opted_out": false,
+      "amount": 318.88,
+      "currency": "INR",
+      "raw_error_description": "Insufficient balance in account",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_54e6850bd452",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T05:31:53.129874",
+    "payload": {
+      "payment_id": "pay_fb93e6f5c2154b",
+      "order_id": "order_6ce0852133e746",
+      "customer_id": "cust_0119",
+      "customer_opted_out": false,
+      "amount": 31871.33,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_411fd78d15a4",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T01:07:53.129874",
+    "payload": {
+      "payment_id": "pay_cc529afe5b8d4c",
+      "order_id": "order_34699977ebad4c",
+      "customer_id": "cust_0106",
+      "customer_opted_out": false,
+      "amount": 19245.65,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_accd9dccb486",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T21:59:53.129874",
+    "payload": {
+      "payment_id": "pay_bec8b8fcd4fd44",
+      "order_id": "order_e089beb6c1f84d",
+      "customer_id": "cust_0057",
+      "customer_opted_out": false,
+      "amount": 2870.84,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_f0934e5cce88",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T17:04:53.129874",
+    "payload": {
+      "payment_id": "pay_31f0899c7e7a47",
+      "order_id": "order_afedc353f9064a",
+      "customer_id": "cust_0070",
+      "customer_opted_out": false,
+      "amount": 31052.46,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_59d59e1d8d1c",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T17:23:53.129874",
+    "payload": {
+      "payment_id": "pay_c9959d16148846",
+      "order_id": "order_325988f5d9da4b",
+      "customer_id": "cust_0078",
+      "customer_opted_out": true,
+      "amount": 3802.88,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_034c0f88455d",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T10:34:53.129874",
+    "payload": {
+      "payment_id": "pay_679c22adcbf14a",
+      "order_id": "order_005e6f400ed642",
+      "customer_id": "cust_0098",
+      "customer_opted_out": false,
+      "amount": 4290.54,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_49a8bbdc92cd",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T14:32:53.129874",
+    "payload": {
+      "payment_id": "pay_72a2eb7488b849",
+      "order_id": "order_c3fb289b79d946",
+      "customer_id": "cust_0084",
+      "customer_opted_out": false,
+      "amount": 26015.44,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_c7862440dbdf",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T18:15:53.129874",
+    "payload": {
+      "payment_id": "pay_ff8803c20a8749",
+      "order_id": "order_c09c4df0b94e4d",
+      "customer_id": "cust_0012",
+      "customer_opted_out": false,
+      "amount": 8329.9,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_486aeac0b48d",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T15:26:53.129874",
+    "payload": {
+      "payment_id": "pay_d26699239f1541",
+      "order_id": "order_3f8aefdec04c42",
+      "customer_id": "cust_0043",
+      "customer_opted_out": false,
+      "amount": 18493.4,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_eda4fd836fcc",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T08:23:53.129874",
+    "payload": {
+      "payment_id": "pay_f0c8bba1cc6c4f",
+      "order_id": "order_00692a6a478a42",
+      "customer_id": "cust_0059",
+      "customer_opted_out": false,
+      "amount": 13111.45,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_d3a34d73a730",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T15:08:53.129874",
+    "payload": {
+      "payment_id": "pay_dd5324a5781640",
+      "order_id": "order_318adcad51cb41",
+      "customer_id": "cust_0106",
+      "customer_opted_out": false,
+      "amount": 11506.72,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_c6c0056c4fe9",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T14:36:53.129874",
+    "payload": {
+      "payment_id": "pay_375827f7dad841",
+      "order_id": "order_eb61711045ce4c",
+      "customer_id": "cust_0047",
+      "customer_opted_out": false,
+      "amount": 39147.53,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined - low balance",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_ffd387aa1066",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T19:30:53.129874",
+    "payload": {
+      "payment_id": "pay_6615860e03c041",
+      "order_id": "order_bc98ed2d177142",
+      "customer_id": "cust_0119",
+      "customer_opted_out": false,
+      "amount": 28217.94,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_03e102d52939",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T04:43:53.129874",
+    "payload": {
+      "payment_id": "pay_3623638c9e434a",
+      "order_id": "order_29333f9127df40",
+      "customer_id": "cust_0091",
+      "customer_opted_out": false,
+      "amount": 39661.81,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_a607c32dfa69",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T21:54:53.129874",
+    "payload": {
+      "payment_id": "pay_4c1b640ddb9c4b",
+      "order_id": "order_04b996b7ebda4c",
+      "customer_id": "cust_0060",
+      "customer_opted_out": false,
+      "amount": 24877.14,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_f9fe44853444",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T15:55:53.129874",
+    "payload": {
+      "payment_id": "pay_0cff8c270a7743",
+      "order_id": "order_96d1e9182a0643",
+      "customer_id": "cust_0091",
+      "customer_opted_out": false,
+      "amount": 37479.85,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined - low balance",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_30d2b005c47c",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T17:39:53.129874",
+    "payload": {
+      "payment_id": "pay_5cd982534f094f",
+      "order_id": "order_2ca1796b506e4e",
+      "customer_id": "cust_0050",
+      "customer_opted_out": false,
+      "amount": 37595.47,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_e3376e509b26",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T23:40:53.129874",
+    "payload": {
+      "payment_id": "pay_1931c00397154e",
+      "order_id": "order_677346cfae5243",
+      "customer_id": "cust_0099",
+      "customer_opted_out": false,
+      "amount": 22968.7,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_f397551a71a1",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T22:46:53.129874",
+    "payload": {
+      "payment_id": "pay_69f0a913891140",
+      "order_id": "order_1d48e437485b42",
+      "customer_id": "cust_0093",
+      "customer_opted_out": false,
+      "amount": 42054.26,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_fda87541149d",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T16:00:53.129874",
+    "payload": {
+      "payment_id": "pay_d4c80b2f06c54c",
+      "order_id": "order_1081da3ff4174e",
+      "customer_id": "cust_0071",
+      "customer_opted_out": false,
+      "amount": 38963.54,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_178434c14f92",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T04:47:53.129874",
+    "payload": {
+      "payment_id": "pay_630f09bc6f7449",
+      "order_id": "order_67ceede3bc8a46",
+      "customer_id": "cust_0074",
+      "customer_opted_out": false,
+      "amount": 20598.89,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d50aa147e9db",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T20:49:53.129874",
+    "payload": {
+      "payment_id": "pay_b4a5e8d7957a4e",
+      "order_id": "order_3dca59661ba443",
+      "customer_id": "cust_0091",
+      "customer_opted_out": false,
+      "amount": 38549.24,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_f25ac02d70ec",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T16:37:53.129874",
+    "payload": {
+      "payment_id": "pay_b9d6c7c54e2446",
+      "order_id": "order_f6308a9d592843",
+      "customer_id": "cust_0064",
+      "customer_opted_out": false,
+      "amount": 44480.94,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_45a4db7ec5c7",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T01:17:53.129874",
+    "payload": {
+      "payment_id": "pay_b8ba156035074c",
+      "order_id": "order_0a94ca1a2a834b",
+      "customer_id": "cust_0013",
+      "customer_opted_out": false,
+      "amount": 22702.15,
+      "currency": "INR",
+      "raw_error_description": "Insufficient balance in account",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_4f0de2885e40",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T16:19:53.129874",
+    "payload": {
+      "payment_id": "pay_6c103552672845",
+      "order_id": "order_8cd419c897824b",
+      "customer_id": "cust_0010",
+      "customer_opted_out": false,
+      "amount": 886.59,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_744c5ca3f566",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T16:32:53.129874",
+    "payload": {
+      "payment_id": "pay_a7c082b6b1824f",
+      "order_id": "order_4ba2517eca1548",
+      "customer_id": "cust_0110",
+      "customer_opted_out": false,
+      "amount": 15366.88,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_161d0c5e553a",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T18:46:53.129874",
+    "payload": {
+      "payment_id": "pay_c0f216fa5fb241",
+      "order_id": "order_c3f3debbcb8d4f",
+      "customer_id": "cust_0112",
+      "customer_opted_out": false,
+      "amount": 17223.8,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_98c3647eb3d1",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T22:09:53.129874",
+    "payload": {
+      "payment_id": "pay_ac42ec08496b42",
+      "order_id": "order_338b34c76c884d",
+      "customer_id": "cust_0030",
+      "customer_opted_out": false,
+      "amount": 27861.8,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_aaf33087eeaf",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T23:40:53.129874",
+    "payload": {
+      "payment_id": "pay_5114b8420b5043",
+      "order_id": "order_d03b02bb5c184e",
+      "customer_id": "cust_0057",
+      "customer_opted_out": false,
+      "amount": 19641.36,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_098cfcd311a2",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T05:44:53.129874",
+    "payload": {
+      "payment_id": "pay_6b784bd1245741",
+      "order_id": "order_ad2e67e61c9143",
+      "customer_id": "cust_0038",
+      "customer_opted_out": true,
+      "amount": 13615.38,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_5f8474231fb7",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T12:48:53.129874",
+    "payload": {
+      "payment_id": "pay_fbb2ef4df68d45",
+      "order_id": "order_6ca85960b8c643",
+      "customer_id": "cust_0022",
+      "customer_opted_out": false,
+      "amount": 19494.2,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_57be3b25a2ce",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T17:27:53.129874",
+    "payload": {
+      "payment_id": "pay_498c3887473443",
+      "order_id": "order_52fe5ec710c14a",
+      "customer_id": "cust_0117",
+      "customer_opted_out": false,
+      "amount": 27504.84,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_393d959b9151",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T12:07:53.129874",
+    "payload": {
+      "payment_id": "pay_3826e762e5664b",
+      "order_id": "order_8129cc90561d49",
+      "customer_id": "cust_0116",
+      "customer_opted_out": false,
+      "amount": 10601.27,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_8cc9ad24e3c0",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T14:13:53.129874",
+    "payload": {
+      "payment_id": "pay_997d75dc4f9f45",
+      "order_id": "order_6271a6db85ad43",
+      "customer_id": "cust_0076",
+      "customer_opted_out": false,
+      "amount": 30556.65,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_a0ce82578ebb",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T08:52:53.129874",
+    "payload": {
+      "payment_id": "pay_65ef427beb3f43",
+      "order_id": "order_1b70c9529b9f4f",
+      "customer_id": "cust_0110",
+      "customer_opted_out": false,
+      "amount": 31125.74,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_a7f8b8c1e437",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T21:05:53.129874",
+    "payload": {
+      "payment_id": "pay_17219a27817d4d",
+      "order_id": "order_058a366f9cb241",
+      "customer_id": "cust_0003",
+      "customer_opted_out": false,
+      "amount": 10826.05,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_70c7e526a673",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T06:42:53.129874",
+    "payload": {
+      "payment_id": "pay_b99693469de041",
+      "order_id": "order_dd48255ecc8f4f",
+      "customer_id": "cust_0117",
+      "customer_opted_out": false,
+      "amount": 12496.0,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_2ae073900b5d",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T05:58:53.129874",
+    "payload": {
+      "payment_id": "pay_a5119b9d481546",
+      "order_id": "order_5d06869f31bb44",
+      "customer_id": "cust_0078",
+      "customer_opted_out": false,
+      "amount": 37511.02,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_cf124069ee42",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T18:43:53.129874",
+    "payload": {
+      "payment_id": "pay_11d404d74c0d4e",
+      "order_id": "order_714024d8ddc841",
+      "customer_id": "cust_0081",
+      "customer_opted_out": false,
+      "amount": 28720.12,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_fbee35376955",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T11:35:53.129874",
+    "payload": {
+      "payment_id": "pay_31515f1b817547",
+      "order_id": "order_86a0d0f3f33f4e",
+      "customer_id": "cust_0094",
+      "customer_opted_out": false,
+      "amount": 29155.71,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined - low balance",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_fa5d39bcead4",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T09:59:53.129874",
+    "payload": {
+      "payment_id": "pay_f3b4f0ff2a6b4b",
+      "order_id": "order_5a8de7c7c08941",
+      "customer_id": "cust_0017",
+      "customer_opted_out": false,
+      "amount": 40951.24,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_c188cf58db1e",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T02:18:53.129874",
+    "payload": {
+      "payment_id": "pay_a0a083c15f094e",
+      "order_id": "order_e3771f8df84742",
+      "customer_id": "cust_0117",
+      "customer_opted_out": false,
+      "amount": 23981.72,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_4539b1e60e56",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T03:07:53.129874",
+    "payload": {
+      "payment_id": "pay_0dffc57a211148",
+      "order_id": "order_866ee3f09b3f41",
+      "customer_id": "cust_0019",
+      "customer_opted_out": false,
+      "amount": 33645.61,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_038c651260de",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T11:27:53.129874",
+    "payload": {
+      "payment_id": "pay_6f666989fd6f47",
+      "order_id": "order_a01af6047a974c",
+      "customer_id": "cust_0012",
+      "customer_opted_out": false,
+      "amount": 32644.63,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 3
+    }
+  },
+  {
+    "event_id": "evt_9b065166593e",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T01:36:53.129874",
+    "payload": {
+      "payment_id": "pay_51d9934198ac46",
+      "order_id": "order_38b567f0f41442",
+      "customer_id": "cust_0075",
+      "customer_opted_out": false,
+      "amount": 12047.01,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_63aa74333c5e",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T16:36:53.129874",
+    "payload": {
+      "payment_id": "pay_3d9dccf5cf004b",
+      "order_id": "order_db9dc394293a4f",
+      "customer_id": "cust_0118",
+      "customer_opted_out": false,
+      "amount": 5053.01,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_8cd41574eed6",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T20:08:53.129874",
+    "payload": {
+      "payment_id": "pay_bf78be429a794c",
+      "order_id": "order_2ca068dee3fb44",
+      "customer_id": "cust_0084",
+      "customer_opted_out": false,
+      "amount": 29214.47,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_afeca87f2403",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T18:08:53.129874",
+    "payload": {
+      "payment_id": "pay_d56c0440838840",
+      "order_id": "order_7475e95b3b4947",
+      "customer_id": "cust_0015",
+      "customer_opted_out": false,
+      "amount": 6461.15,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_b5df0e48a55e",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T04:10:53.129874",
+    "payload": {
+      "payment_id": "pay_7d2ac63b2ac045",
+      "order_id": "order_399afe2b481e4c",
+      "customer_id": "cust_0076",
+      "customer_opted_out": false,
+      "amount": 39949.1,
+      "currency": "INR",
+      "raw_error_description": "Insufficient balance in account",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_1b29f858e7c5",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T18:35:53.129874",
+    "payload": {
+      "payment_id": "pay_74024e7b0ce54f",
+      "order_id": "order_0736026e50d442",
+      "customer_id": "cust_0079",
+      "customer_opted_out": false,
+      "amount": 7121.78,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_baa8c31b2b36",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T05:09:53.129874",
+    "payload": {
+      "payment_id": "pay_468e4814786547",
+      "order_id": "order_0b0d277012be43",
+      "customer_id": "cust_0110",
+      "customer_opted_out": false,
+      "amount": 1664.72,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_3db62b9085ec",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T12:25:53.129874",
+    "payload": {
+      "payment_id": "pay_3110b3c3bfa94f",
+      "order_id": "order_ab72e5affdd240",
+      "customer_id": "cust_0008",
+      "customer_opted_out": false,
+      "amount": 44145.54,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_9481fdb8274e",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T23:18:53.129874",
+    "payload": {
+      "payment_id": "pay_b361f4eb732346",
+      "order_id": "order_7944cf9c13fd44",
+      "customer_id": "cust_0012",
+      "customer_opted_out": false,
+      "amount": 8702.61,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_2bde19efa9a8",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T15:51:53.129874",
+    "payload": {
+      "payment_id": "pay_253ea2b4bd0643",
+      "order_id": "order_416bce962cd24c",
+      "customer_id": "cust_0032",
+      "customer_opted_out": false,
+      "amount": 28948.0,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_67e2dfd8997f",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T07:54:53.129874",
+    "payload": {
+      "payment_id": "pay_f1d1e617b66442",
+      "order_id": "order_74cf273340c84f",
+      "customer_id": "cust_0105",
+      "customer_opted_out": false,
+      "amount": 9392.41,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_fe5cbb4eb004",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T23:32:53.129874",
+    "payload": {
+      "payment_id": "pay_d69c458621a24c",
+      "order_id": "order_e3284ee6ec8244",
+      "customer_id": "cust_0110",
+      "customer_opted_out": false,
+      "amount": 34891.49,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_6b0e7057dbd1",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T09:52:53.129874",
+    "payload": {
+      "payment_id": "pay_8b54794dd0074b",
+      "order_id": "order_ec63753125ab43",
+      "customer_id": "cust_0017",
+      "customer_opted_out": false,
+      "amount": 24401.19,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_8369a7b3f08d",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T13:36:53.129874",
+    "payload": {
+      "payment_id": "pay_fb4aebc40f6e49",
+      "order_id": "order_848e00b360b341",
+      "customer_id": "cust_0034",
+      "customer_opted_out": false,
+      "amount": 35591.1,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_0df320996796",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T20:22:53.129874",
+    "payload": {
+      "payment_id": "pay_91deb64249a14c",
+      "order_id": "order_189a87da8dc744",
+      "customer_id": "cust_0058",
+      "customer_opted_out": false,
+      "amount": 33428.71,
+      "currency": "INR",
+      "raw_error_description": "Insufficient balance in account",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_5cee7ff3c583",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T14:12:53.129874",
+    "payload": {
+      "payment_id": "pay_84b5d2cffac443",
+      "order_id": "order_d3162324ac1d42",
+      "customer_id": "cust_0039",
+      "customer_opted_out": false,
+      "amount": 20449.29,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_aaf8f2900dbe",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T22:39:53.129874",
+    "payload": {
+      "payment_id": "pay_9bd98e92de6b47",
+      "order_id": "order_c27fdd6372784e",
+      "customer_id": "cust_0063",
+      "customer_opted_out": false,
+      "amount": 2924.04,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_0a499435c159",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T04:25:53.129874",
+    "payload": {
+      "payment_id": "pay_912034c0e8f446",
+      "order_id": "order_8346921827e240",
+      "customer_id": "cust_0017",
+      "customer_opted_out": false,
+      "amount": 3491.46,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_5663182247c2",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T16:22:53.129874",
+    "payload": {
+      "payment_id": "pay_77e9b824351042",
+      "order_id": "order_fafd0986f31044",
+      "customer_id": "cust_0078",
+      "customer_opted_out": false,
+      "amount": 17263.9,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_39fa4603f7d6",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T08:02:53.129874",
+    "payload": {
+      "payment_id": "pay_bf2532dfea284b",
+      "order_id": "order_8fbdfd4e3be943",
+      "customer_id": "cust_0056",
+      "customer_opted_out": false,
+      "amount": 35730.5,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_0e7148afee87",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T00:25:53.129874",
+    "payload": {
+      "payment_id": "pay_f5996537823b4b",
+      "order_id": "order_b29587a4505e4c",
+      "customer_id": "cust_0041",
+      "customer_opted_out": false,
+      "amount": 18738.26,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d4c997d2cf44",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T20:38:53.129874",
+    "payload": {
+      "payment_id": "pay_2f0967c4ba5645",
+      "order_id": "order_a234e2ab0b7149",
+      "customer_id": "cust_0009",
+      "customer_opted_out": false,
+      "amount": 29996.5,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_fa0974a7df1a",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T19:38:53.129874",
+    "payload": {
+      "payment_id": "pay_ac793cc37a8e4b",
+      "order_id": "order_1c0227f91b9843",
+      "customer_id": "cust_0072",
+      "customer_opted_out": false,
+      "amount": 4375.8,
+      "currency": "INR",
+      "raw_error_description": "Insufficient balance in account",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_773c89bbb3b0",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T05:18:53.129874",
+    "payload": {
+      "payment_id": "pay_5cd5578432cb4c",
+      "order_id": "order_284b110c95ff46",
+      "customer_id": "cust_0046",
+      "customer_opted_out": false,
+      "amount": 43056.74,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined - low balance",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_7a38a5ccca72",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T18:44:53.129874",
+    "payload": {
+      "payment_id": "pay_ce6064f8db0040",
+      "order_id": "order_1661d313022a4e",
+      "customer_id": "cust_0046",
+      "customer_opted_out": false,
+      "amount": 39090.4,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 3
+    }
+  },
+  {
+    "event_id": "evt_fca44df6c310",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T22:37:53.129874",
+    "payload": {
+      "payment_id": "pay_b45ebf89261c4f",
+      "order_id": "order_21e6e8e316204c",
+      "customer_id": "cust_0045",
+      "customer_opted_out": false,
+      "amount": 22931.59,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined - low balance",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_03d28fd61c13",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T02:48:53.129874",
+    "payload": {
+      "payment_id": "pay_a8fc858eb07b45",
+      "order_id": "order_60239c2f51f24f",
+      "customer_id": "cust_0109",
+      "customer_opted_out": false,
+      "amount": 5345.98,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_b3ed5345408d",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T09:26:53.129874",
+    "payload": {
+      "payment_id": "pay_fd0916090ca84f",
+      "order_id": "order_796e74d2103644",
+      "customer_id": "cust_0024",
+      "customer_opted_out": false,
+      "amount": 27482.58,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_7d676e2f796e",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T17:50:53.129874",
+    "payload": {
+      "payment_id": "pay_8b413f88ad6b4e",
+      "order_id": "order_61f0eb41083142",
+      "customer_id": "cust_0073",
+      "customer_opted_out": false,
+      "amount": 41484.8,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_64fb05a6bc88",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T00:52:53.129874",
+    "payload": {
+      "payment_id": "pay_057258436e3145",
+      "order_id": "order_a3eb0e46eb4c4f",
+      "customer_id": "cust_0096",
+      "customer_opted_out": false,
+      "amount": 3316.5,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 3
+    }
+  },
+  {
+    "event_id": "evt_357c44bd8685",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T18:51:53.129874",
+    "payload": {
+      "payment_id": "pay_80028329e2ab4c",
+      "order_id": "order_30fd64ac4cb741",
+      "customer_id": "cust_0093",
+      "customer_opted_out": false,
+      "amount": 17052.89,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_a450f3754295",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T06:36:53.129874",
+    "payload": {
+      "payment_id": "pay_c71c910440fa44",
+      "order_id": "order_032c92fea0534b",
+      "customer_id": "cust_0087",
+      "customer_opted_out": false,
+      "amount": 39773.61,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_b60f99d3d960",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T04:51:53.129874",
+    "payload": {
+      "payment_id": "pay_7fe0c189c23940",
+      "order_id": "order_9ade3f6e970247",
+      "customer_id": "cust_0035",
+      "customer_opted_out": false,
+      "amount": 20050.9,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_0438cfd521fd",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T18:57:53.129874",
+    "payload": {
+      "payment_id": "pay_7132350e477744",
+      "order_id": "order_d0bbd4858a5e43",
+      "customer_id": "cust_0068",
+      "customer_opted_out": false,
+      "amount": 5298.14,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_1c9b1920e0f0",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T12:21:53.129874",
+    "payload": {
+      "payment_id": "pay_a990c6edcf2542",
+      "order_id": "order_54d05091d45245",
+      "customer_id": "cust_0027",
+      "customer_opted_out": false,
+      "amount": 2233.74,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_37c7b666db08",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T21:01:53.129874",
+    "payload": {
+      "payment_id": "pay_3dbf0e74e99f40",
+      "order_id": "order_da4e05f47dcd41",
+      "customer_id": "cust_0001",
+      "customer_opted_out": false,
+      "amount": 34577.03,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_673793c2c926",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T17:05:53.129874",
+    "payload": {
+      "payment_id": "pay_d3a11f2ea92643",
+      "order_id": "order_ed73558dbbb74a",
+      "customer_id": "cust_0072",
+      "customer_opted_out": false,
+      "amount": 8070.3,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_e9f6c9f6bb93",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T10:50:53.129874",
+    "payload": {
+      "payment_id": "pay_4ec667debfda45",
+      "order_id": "order_89ac99d632b64f",
+      "customer_id": "cust_0059",
+      "customer_opted_out": false,
+      "amount": 3428.05,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_0503723d9d43",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T04:22:53.129874",
+    "payload": {
+      "payment_id": "pay_5bb2578e12a547",
+      "order_id": "order_ce68741bf23f49",
+      "customer_id": "cust_0038",
+      "customer_opted_out": false,
+      "amount": 25993.59,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_958cdbe9f6ce",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T22:34:53.129874",
+    "payload": {
+      "payment_id": "pay_290d0b94ca6f44",
+      "order_id": "order_ff49b02e222344",
+      "customer_id": "cust_0107",
+      "customer_opted_out": false,
+      "amount": 1133.39,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_c25567dadcc6",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T06:43:53.129874",
+    "payload": {
+      "payment_id": "pay_f21b5041234d41",
+      "order_id": "order_9b831ff90fb64a",
+      "customer_id": "cust_0068",
+      "customer_opted_out": false,
+      "amount": 4147.31,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_37c5f309c1dc",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T14:26:53.129874",
+    "payload": {
+      "payment_id": "pay_3cc72560593249",
+      "order_id": "order_61762e5a50dc47",
+      "customer_id": "cust_0010",
+      "customer_opted_out": false,
+      "amount": 39199.36,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_33fc31ae98b5",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T13:27:53.129874",
+    "payload": {
+      "payment_id": "pay_14b14a24b3334b",
+      "order_id": "order_4a9f4cb11aaa4c",
+      "customer_id": "cust_0094",
+      "customer_opted_out": false,
+      "amount": 23970.63,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_414b3fd116ec",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T16:31:53.129874",
+    "payload": {
+      "payment_id": "pay_100330f4c93549",
+      "order_id": "order_845d922561cc4a",
+      "customer_id": "cust_0098",
+      "customer_opted_out": false,
+      "amount": 10784.08,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_8d8914ab7aac",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T00:06:53.129874",
+    "payload": {
+      "payment_id": "pay_3a6296a6fdf34c",
+      "order_id": "order_4660ce4ad11648",
+      "customer_id": "cust_0088",
+      "customer_opted_out": false,
+      "amount": 8135.32,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_ded844924b0e",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T04:04:53.129874",
+    "payload": {
+      "payment_id": "pay_82ab1f95b7e74a",
+      "order_id": "order_dc0adf182ae749",
+      "customer_id": "cust_0061",
+      "customer_opted_out": false,
+      "amount": 38918.12,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_388dce426b95",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T03:16:53.129874",
+    "payload": {
+      "payment_id": "pay_0901a7b480e542",
+      "order_id": "order_b5bc71186c2240",
+      "customer_id": "cust_0040",
+      "customer_opted_out": false,
+      "amount": 35875.37,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_bf467addc11a",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T01:04:53.129874",
+    "payload": {
+      "payment_id": "pay_5dc5f4f534194a",
+      "order_id": "order_7773b1c10e2949",
+      "customer_id": "cust_0079",
+      "customer_opted_out": false,
+      "amount": 1883.84,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_1ed40999989e",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T07:47:53.129874",
+    "payload": {
+      "payment_id": "pay_bac2077b014647",
+      "order_id": "order_db4766ed97cd46",
+      "customer_id": "cust_0058",
+      "customer_opted_out": false,
+      "amount": 20928.95,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_ff0f0476a86c",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T04:57:53.129874",
+    "payload": {
+      "payment_id": "pay_9c4dd8c892a846",
+      "order_id": "order_801410cba03047",
+      "customer_id": "cust_0058",
+      "customer_opted_out": false,
+      "amount": 14603.72,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_f407f8dcf125",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T08:03:53.129874",
+    "payload": {
+      "payment_id": "pay_73400ab9bb6743",
+      "order_id": "order_d1bc6995d34145",
+      "customer_id": "cust_0032",
+      "customer_opted_out": false,
+      "amount": 44210.86,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_54f07734c7f0",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T11:42:53.129874",
+    "payload": {
+      "payment_id": "pay_10a8cc1479164a",
+      "order_id": "order_561b137531bc41",
+      "customer_id": "cust_0048",
+      "customer_opted_out": false,
+      "amount": 44596.16,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_3ee5d79b617c",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T15:42:53.129874",
+    "payload": {
+      "payment_id": "pay_07e76e2a315448",
+      "order_id": "order_664c101bca0546",
+      "customer_id": "cust_0009",
+      "customer_opted_out": false,
+      "amount": 18512.28,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_16204b8ac8ae",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T16:52:53.129874",
+    "payload": {
+      "payment_id": "pay_7266daefbc004d",
+      "order_id": "order_5f3c7f30e2154b",
+      "customer_id": "cust_0043",
+      "customer_opted_out": false,
+      "amount": 25196.31,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_3cc3307a96f7",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T07:53:53.129874",
+    "payload": {
+      "payment_id": "pay_ff6641b466644a",
+      "order_id": "order_e85c231ffa304b",
+      "customer_id": "cust_0017",
+      "customer_opted_out": false,
+      "amount": 29929.49,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined - low balance",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_24a14ea70581",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T19:57:53.129874",
+    "payload": {
+      "payment_id": "pay_8e4004d12e4047",
+      "order_id": "order_4c2cb46acb2a4d",
+      "customer_id": "cust_0086",
+      "customer_opted_out": false,
+      "amount": 14068.58,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_e4b3cba324e2",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T03:35:53.129874",
+    "payload": {
+      "payment_id": "pay_1459694fea0c47",
+      "order_id": "order_91684ab9e7434e",
+      "customer_id": "cust_0066",
+      "customer_opted_out": false,
+      "amount": 44872.95,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_3442b6cee611",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T19:00:53.129874",
+    "payload": {
+      "payment_id": "pay_54ccd18424804b",
+      "order_id": "order_b9e20dfbe2394a",
+      "customer_id": "cust_0025",
+      "customer_opted_out": false,
+      "amount": 16443.74,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_8f0a6e60613f",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T16:05:53.129874",
+    "payload": {
+      "payment_id": "pay_c14f632b942244",
+      "order_id": "order_e210bc7c21b34c",
+      "customer_id": "cust_0099",
+      "customer_opted_out": false,
+      "amount": 7140.7,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_514ed240d712",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T09:57:53.129874",
+    "payload": {
+      "payment_id": "pay_0f9b4d6feacb47",
+      "order_id": "order_a60fb54e0f5748",
+      "customer_id": "cust_0020",
+      "customer_opted_out": false,
+      "amount": 29854.09,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_7dff0758977a",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T14:47:53.129874",
+    "payload": {
+      "payment_id": "pay_9de3ef7b2cc042",
+      "order_id": "order_d1a136b4a8d24b",
+      "customer_id": "cust_0093",
+      "customer_opted_out": false,
+      "amount": 37444.09,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_2ab1c944e789",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T00:45:53.129874",
+    "payload": {
+      "payment_id": "pay_e97673a5297d4d",
+      "order_id": "order_38fca85d93ee4d",
+      "customer_id": "cust_0079",
+      "customer_opted_out": false,
+      "amount": 18605.88,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_6386f99ca182",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T21:21:53.129874",
+    "payload": {
+      "payment_id": "pay_c132ba4f999d4d",
+      "order_id": "order_3c0c5b764a2745",
+      "customer_id": "cust_0116",
+      "customer_opted_out": false,
+      "amount": 10682.57,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 3
+    }
+  },
+  {
+    "event_id": "evt_0ad80ecb9765",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T22:55:53.129874",
+    "payload": {
+      "payment_id": "pay_a0b0dd5a875c4b",
+      "order_id": "order_dde254c64a394d",
+      "customer_id": "cust_0100",
+      "customer_opted_out": false,
+      "amount": 30587.82,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_370cf1d6533c",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T18:30:53.129874",
+    "payload": {
+      "payment_id": "pay_5523699d7d8744",
+      "order_id": "order_369b9781c21a41",
+      "customer_id": "cust_0112",
+      "customer_opted_out": false,
+      "amount": 43488.78,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_87ce3d5b1055",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T23:23:53.129874",
+    "payload": {
+      "payment_id": "pay_f49d5ae48ac943",
+      "order_id": "order_b23f99e17ea84b",
+      "customer_id": "cust_0092",
+      "customer_opted_out": false,
+      "amount": 28924.46,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_b09dea7fb864",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T15:18:53.129874",
+    "payload": {
+      "payment_id": "pay_1213496dcdcd4b",
+      "order_id": "order_619dcdaaaaf34c",
+      "customer_id": "cust_0019",
+      "customer_opted_out": false,
+      "amount": 12970.11,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_cf00f2df92e8",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T13:40:53.129874",
+    "payload": {
+      "payment_id": "pay_93474b4582674f",
+      "order_id": "order_15d9a1d951ae41",
+      "customer_id": "cust_0120",
+      "customer_opted_out": false,
+      "amount": 42599.26,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d25744687f9d",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T02:15:53.129874",
+    "payload": {
+      "payment_id": "pay_0a500e18083146",
+      "order_id": "order_18b184b7e9ba4c",
+      "customer_id": "cust_0048",
+      "customer_opted_out": false,
+      "amount": 2584.96,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_ffb2715da29b",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T15:37:53.129874",
+    "payload": {
+      "payment_id": "pay_d67e9f5345554a",
+      "order_id": "order_c9236f6ec20742",
+      "customer_id": "cust_0102",
+      "customer_opted_out": false,
+      "amount": 14476.4,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_163715262008",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T18:27:53.129874",
+    "payload": {
+      "payment_id": "pay_bc0bca84e21c4b",
+      "order_id": "order_167662fa647245",
+      "customer_id": "cust_0098",
+      "customer_opted_out": false,
+      "amount": 1915.02,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_361f38a5309e",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T02:27:53.129874",
+    "payload": {
+      "payment_id": "pay_e31cb8069bf849",
+      "order_id": "order_5ff188845ece4b",
+      "customer_id": "cust_0028",
+      "customer_opted_out": true,
+      "amount": 20296.79,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_be27c10e7dce",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T22:03:53.129874",
+    "payload": {
+      "payment_id": "pay_f5771ea5f7cd4d",
+      "order_id": "order_2599c9e665b84e",
+      "customer_id": "cust_0031",
+      "customer_opted_out": false,
+      "amount": 42322.06,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_261dfdacba7b",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T22:59:53.129874",
+    "payload": {
+      "payment_id": "pay_57d6b03245204d",
+      "order_id": "order_4f2567bd850045",
+      "customer_id": "cust_0009",
+      "customer_opted_out": false,
+      "amount": 2338.22,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_3f70430080a8",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T04:22:53.129874",
+    "payload": {
+      "payment_id": "pay_c09b90cb77a145",
+      "order_id": "order_baeb3fa6d3cc49",
+      "customer_id": "cust_0092",
+      "customer_opted_out": true,
+      "amount": 26933.51,
+      "currency": "INR",
+      "raw_error_description": "Your account has insufficient funds for this transaction",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_a3c9500d51f0",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T04:31:53.129874",
+    "payload": {
+      "payment_id": "pay_2abe7dc7b20e4a",
+      "order_id": "order_14c93fc08a1f43",
+      "customer_id": "cust_0024",
+      "customer_opted_out": false,
+      "amount": 19429.33,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d8d770f4433b",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T13:34:53.129874",
+    "payload": {
+      "payment_id": "pay_1243293591ab46",
+      "order_id": "order_5926f1c4a0d349",
+      "customer_id": "cust_0070",
+      "customer_opted_out": false,
+      "amount": 4034.59,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_0b73141136e2",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T10:25:53.129874",
+    "payload": {
+      "payment_id": "pay_97f1f2977aa043",
+      "order_id": "order_e2778085e7654d",
+      "customer_id": "cust_0033",
+      "customer_opted_out": false,
+      "amount": 17691.72,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_6a66627d11b7",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T23:14:53.129874",
+    "payload": {
+      "payment_id": "pay_ccc37b96d1c94f",
+      "order_id": "order_dc2ddd1f7d6c43",
+      "customer_id": "cust_0099",
+      "customer_opted_out": false,
+      "amount": 16197.16,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_c01b018f056e",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T13:29:53.129874",
+    "payload": {
+      "payment_id": "pay_59d32d611f304d",
+      "order_id": "order_9b4d8b4e7f0f4c",
+      "customer_id": "cust_0107",
+      "customer_opted_out": false,
+      "amount": 6175.88,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_4e4457190372",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T18:59:53.129874",
+    "payload": {
+      "payment_id": "pay_20ac7cf9e5e449",
+      "order_id": "order_7f5b987ff5274f",
+      "customer_id": "cust_0009",
+      "customer_opted_out": false,
+      "amount": 44140.68,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_abc08f4b92d3",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T07:40:53.129874",
+    "payload": {
+      "payment_id": "pay_e6633ed4ae884d",
+      "order_id": "order_624675b51b1742",
+      "customer_id": "cust_0041",
+      "customer_opted_out": false,
+      "amount": 1855.91,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_b1f2b5a70963",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T11:18:53.129874",
+    "payload": {
+      "payment_id": "pay_43ecc066f8154e",
+      "order_id": "order_cfffcb839bc24d",
+      "customer_id": "cust_0037",
+      "customer_opted_out": false,
+      "amount": 44512.69,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_f0e72cee19aa",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T11:09:53.129874",
+    "payload": {
+      "payment_id": "pay_b4ac2436a0094a",
+      "order_id": "order_e10dbff2d87f46",
+      "customer_id": "cust_0056",
+      "customer_opted_out": false,
+      "amount": 38987.63,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_2aa4aad1039a",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T17:39:53.129874",
+    "payload": {
+      "payment_id": "pay_755c785123a749",
+      "order_id": "order_8de9ecac60634c",
+      "customer_id": "cust_0089",
+      "customer_opted_out": false,
+      "amount": 40279.65,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 3
+    }
+  },
+  {
+    "event_id": "evt_176767b3c71f",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T03:26:53.129874",
+    "payload": {
+      "payment_id": "pay_494a23b37e6842",
+      "order_id": "order_5e7ba2e7e8fc44",
+      "customer_id": "cust_0011",
+      "customer_opted_out": false,
+      "amount": 41609.03,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_fe349b3c21f0",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T21:02:53.129874",
+    "payload": {
+      "payment_id": "pay_0fee3c5f2bf447",
+      "order_id": "order_686d4900208f46",
+      "customer_id": "cust_0040",
+      "customer_opted_out": false,
+      "amount": 24636.8,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_0c7d396c6583",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T13:15:53.129874",
+    "payload": {
+      "payment_id": "pay_f4bd3b01595244",
+      "order_id": "order_4bd7369562c344",
+      "customer_id": "cust_0079",
+      "customer_opted_out": false,
+      "amount": 7664.85,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d8eab44485b1",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T05:56:53.129874",
+    "payload": {
+      "payment_id": "pay_f4eb5305aeba4a",
+      "order_id": "order_8fff80fa08c542",
+      "customer_id": "cust_0047",
+      "customer_opted_out": false,
+      "amount": 28847.86,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_438741cc8f7d",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T01:34:53.129874",
+    "payload": {
+      "payment_id": "pay_9512db1bf3f74e",
+      "order_id": "order_9911dda56c8e42",
+      "customer_id": "cust_0005",
+      "customer_opted_out": false,
+      "amount": 42884.92,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_2d22aa770f6d",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T08:58:53.129874",
+    "payload": {
+      "payment_id": "pay_712e9959b41647",
+      "order_id": "order_5fe3de2505d44e",
+      "customer_id": "cust_0078",
+      "customer_opted_out": false,
+      "amount": 10771.83,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_fd5307edd030",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T02:54:53.129874",
+    "payload": {
+      "payment_id": "pay_4bf33874a31d42",
+      "order_id": "order_e5593cdcf0aa4f",
+      "customer_id": "cust_0074",
+      "customer_opted_out": false,
+      "amount": 20355.98,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d2dcefd1cd03",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T21:54:53.129874",
+    "payload": {
+      "payment_id": "pay_b76273b393a643",
+      "order_id": "order_91496e09c6044c",
+      "customer_id": "cust_0004",
+      "customer_opted_out": false,
+      "amount": 16638.72,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_91aa1d1dda9b",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T01:39:53.129874",
+    "payload": {
+      "payment_id": "pay_0ee1e6fe39af49",
+      "order_id": "order_62243320e02d47",
+      "customer_id": "cust_0100",
+      "customer_opted_out": false,
+      "amount": 22556.67,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_c09ff6f50228",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T18:20:53.129874",
+    "payload": {
+      "payment_id": "pay_aab237a24fe34c",
+      "order_id": "order_ec14c49055174a",
+      "customer_id": "cust_0026",
+      "customer_opted_out": false,
+      "amount": 9811.97,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_f11b5fe84d5c",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T00:37:53.129874",
+    "payload": {
+      "payment_id": "pay_9232c51978cd46",
+      "order_id": "order_9432a17f5bb64e",
+      "customer_id": "cust_0012",
+      "customer_opted_out": false,
+      "amount": 38406.47,
+      "currency": "INR",
+      "raw_error_description": "Insufficient balance in account",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_6cb33a8115f0",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T21:45:53.129874",
+    "payload": {
+      "payment_id": "pay_d2d30347570b45",
+      "order_id": "order_6ada60be16dc46",
+      "customer_id": "cust_0115",
+      "customer_opted_out": false,
+      "amount": 30118.89,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_7f04d047de11",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T12:02:53.129874",
+    "payload": {
+      "payment_id": "pay_7f3edfe6dc3b47",
+      "order_id": "order_03029c0c51274b",
+      "customer_id": "cust_0066",
+      "customer_opted_out": false,
+      "amount": 32088.76,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d04453b451f8",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T17:56:53.129874",
+    "payload": {
+      "payment_id": "pay_2047290ba42341",
+      "order_id": "order_c035ed0cfbcf45",
+      "customer_id": "cust_0004",
+      "customer_opted_out": false,
+      "amount": 44333.92,
+      "currency": "INR",
+      "raw_error_description": "Issuing bank server not responding",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_6a33e585bee2",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T01:37:53.129874",
+    "payload": {
+      "payment_id": "pay_1684aa513a6845",
+      "order_id": "order_a491b61116fe40",
+      "customer_id": "cust_0009",
+      "customer_opted_out": false,
+      "amount": 21139.25,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_f01edfc08278",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T05:29:53.129874",
+    "payload": {
+      "payment_id": "pay_f29734ec35f640",
+      "order_id": "order_4f6361e9dcaa4f",
+      "customer_id": "cust_0106",
+      "customer_opted_out": false,
+      "amount": 44981.86,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_53a810604fe3",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T21:47:53.129874",
+    "payload": {
+      "payment_id": "pay_4f18bf0db06f49",
+      "order_id": "order_9e91b4fd881748",
+      "customer_id": "cust_0088",
+      "customer_opted_out": false,
+      "amount": 5813.77,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_f1f5fe30b626",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T12:33:53.129874",
+    "payload": {
+      "payment_id": "pay_0d6e679efdd94e",
+      "order_id": "order_d5903456b1404d",
+      "customer_id": "cust_0099",
+      "customer_opted_out": false,
+      "amount": 5948.52,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_e354542b3149",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T14:39:53.129874",
+    "payload": {
+      "payment_id": "pay_258c23cd7ecb40",
+      "order_id": "order_bfa6e8877f174c",
+      "customer_id": "cust_0020",
+      "customer_opted_out": false,
+      "amount": 22727.8,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_3865a6e7ecdf",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T14:33:53.129874",
+    "payload": {
+      "payment_id": "pay_a5a33c791a8345",
+      "order_id": "order_04d709077f2e4e",
+      "customer_id": "cust_0115",
+      "customer_opted_out": false,
+      "amount": 7455.28,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_70dcc1a43f4d",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T20:18:53.129874",
+    "payload": {
+      "payment_id": "pay_b7f9e1966bdf47",
+      "order_id": "order_0f769998b2e842",
+      "customer_id": "cust_0081",
+      "customer_opted_out": false,
+      "amount": 11426.37,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_3d132a2b70c8",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T16:20:53.129874",
+    "payload": {
+      "payment_id": "pay_8365a8b0d2d940",
+      "order_id": "order_0eae929bf77b4c",
+      "customer_id": "cust_0022",
+      "customer_opted_out": false,
+      "amount": 22714.78,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_ef78f7dfb87c",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T07:46:53.129874",
+    "payload": {
+      "payment_id": "pay_b50b7df59d0743",
+      "order_id": "order_f679e9e6857447",
+      "customer_id": "cust_0106",
+      "customer_opted_out": false,
+      "amount": 32484.07,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_8c2e931ef613",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T08:37:53.129874",
+    "payload": {
+      "payment_id": "pay_6c834765b2674b",
+      "order_id": "order_8a738b7d89fa48",
+      "customer_id": "cust_0099",
+      "customer_opted_out": false,
+      "amount": 2235.73,
+      "currency": "INR",
+      "raw_error_description": "Insufficient balance in account",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_70831e6a0070",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T21:51:53.129874",
+    "payload": {
+      "payment_id": "pay_bdefe0dc0c8d4d",
+      "order_id": "order_7eda08ff893845",
+      "customer_id": "cust_0083",
+      "customer_opted_out": true,
+      "amount": 27890.88,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_a09448f0bc07",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T23:28:53.129874",
+    "payload": {
+      "payment_id": "pay_c6866d6de70c4f",
+      "order_id": "order_5c1bf6322d014a",
+      "customer_id": "cust_0010",
+      "customer_opted_out": false,
+      "amount": 11169.78,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d3c58dab833b",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T14:57:53.129874",
+    "payload": {
+      "payment_id": "pay_115cc34c745c4e",
+      "order_id": "order_5d68e8584ffb44",
+      "customer_id": "cust_0078",
+      "customer_opted_out": false,
+      "amount": 7281.16,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_a1aea365f005",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T14:14:53.129874",
+    "payload": {
+      "payment_id": "pay_a2c5c4a4e03f42",
+      "order_id": "order_a900f1c3d0bd48",
+      "customer_id": "cust_0052",
+      "customer_opted_out": false,
+      "amount": 38794.39,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 3
+    }
+  },
+  {
+    "event_id": "evt_c3e64e2fc8d4",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T20:40:53.129874",
+    "payload": {
+      "payment_id": "pay_6b9d474ddb9d42",
+      "order_id": "order_e69b71370e0046",
+      "customer_id": "cust_0035",
+      "customer_opted_out": false,
+      "amount": 23270.62,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_407af93e68df",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T04:18:53.129874",
+    "payload": {
+      "payment_id": "pay_9d85703994fe46",
+      "order_id": "order_a6f6566b447942",
+      "customer_id": "cust_0032",
+      "customer_opted_out": false,
+      "amount": 6510.46,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_56f5d07282d6",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T15:38:53.129874",
+    "payload": {
+      "payment_id": "pay_99e6f3c8970e46",
+      "order_id": "order_26ee9753fa5648",
+      "customer_id": "cust_0064",
+      "customer_opted_out": false,
+      "amount": 42032.0,
+      "currency": "INR",
+      "raw_error_description": "Payment gateway timeout - bank unreachable",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_4a2cccb1fbe8",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T07:42:53.129874",
+    "payload": {
+      "payment_id": "pay_0747b6be946c41",
+      "order_id": "order_99565133a8744a",
+      "customer_id": "cust_0065",
+      "customer_opted_out": false,
+      "amount": 22543.93,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_5bb083923862",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T17:49:53.129874",
+    "payload": {
+      "payment_id": "pay_01f19c4ca62d46",
+      "order_id": "order_03737c96156b4c",
+      "customer_id": "cust_0077",
+      "customer_opted_out": false,
+      "amount": 9837.69,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_3fba8f70d8cb",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T02:33:53.129874",
+    "payload": {
+      "payment_id": "pay_4ca573b5566143",
+      "order_id": "order_e40def44421248",
+      "customer_id": "cust_0018",
+      "customer_opted_out": false,
+      "amount": 21281.76,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_a5091049ef45",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T10:49:53.129874",
+    "payload": {
+      "payment_id": "pay_e79f2b14d3f940",
+      "order_id": "order_434551475fba47",
+      "customer_id": "cust_0047",
+      "customer_opted_out": false,
+      "amount": 34420.55,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_7abb67f1bd5d",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T23:12:53.129874",
+    "payload": {
+      "payment_id": "pay_54ab78be612045",
+      "order_id": "order_b872f7d12af349",
+      "customer_id": "cust_0106",
+      "customer_opted_out": false,
+      "amount": 3493.3,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_81b19f838b89",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T15:06:53.129874",
+    "payload": {
+      "payment_id": "pay_2aa7ee21f2004e",
+      "order_id": "order_5f6f48b567f743",
+      "customer_id": "cust_0072",
+      "customer_opted_out": false,
+      "amount": 5963.25,
+      "currency": "INR",
+      "raw_error_description": "Invalid card number",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_21d8ef2aab5b",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T07:12:53.129874",
+    "payload": {
+      "payment_id": "pay_02258b5ad17644",
+      "order_id": "order_6948dac0e34340",
+      "customer_id": "cust_0005",
+      "customer_opted_out": false,
+      "amount": 9116.99,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_069331315e4c",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T15:00:53.129874",
+    "payload": {
+      "payment_id": "pay_d53e13eae7d842",
+      "order_id": "order_713988d8bee542",
+      "customer_id": "cust_0018",
+      "customer_opted_out": false,
+      "amount": 15119.56,
+      "currency": "INR",
+      "raw_error_description": "Bank system under maintenance",
+      "_ground_truth_reason": "bank_downtime",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_e3010610b0d7",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T20:32:53.129874",
+    "payload": {
+      "payment_id": "pay_72effc45d21d41",
+      "order_id": "order_35f865003acb40",
+      "customer_id": "cust_0076",
+      "customer_opted_out": false,
+      "amount": 7479.25,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_f22f1fa7b55f",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T11:06:53.129874",
+    "payload": {
+      "payment_id": "pay_4d6d14d1d1de43",
+      "order_id": "order_820b50e72b3a40",
+      "customer_id": "cust_0043",
+      "customer_opted_out": false,
+      "amount": 31951.25,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_e9595418c8fc",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T09:45:53.129874",
+    "payload": {
+      "payment_id": "pay_dd47d284058244",
+      "order_id": "order_9af0d383a19443",
+      "customer_id": "cust_0077",
+      "customer_opted_out": false,
+      "amount": 44099.41,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_4e8ed9a6ee8b",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T06:19:53.129874",
+    "payload": {
+      "payment_id": "pay_7c0eccd6d1d841",
+      "order_id": "order_8ef9154a4b1540",
+      "customer_id": "cust_0093",
+      "customer_opted_out": false,
+      "amount": 43524.73,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_d98ff346502e",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T09:29:53.129874",
+    "payload": {
+      "payment_id": "pay_4275e76db70748",
+      "order_id": "order_0361c8608e2f43",
+      "customer_id": "cust_0019",
+      "customer_opted_out": false,
+      "amount": 21723.59,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined - low balance",
+      "_ground_truth_reason": "insufficient_funds",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_fbe1ff11c206",
+    "event": "payment.failed",
+    "created_at": "2026-08-28T10:48:53.129874",
+    "payload": {
+      "payment_id": "pay_b19cc54125ec4d",
+      "order_id": "order_ed2650b5115f47",
+      "customer_id": "cust_0057",
+      "customer_opted_out": false,
+      "amount": 1613.39,
+      "currency": "INR",
+      "raw_error_description": "Do not honour - declined by issuing bank",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_2eb39a044ba0",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T21:00:53.129874",
+    "payload": {
+      "payment_id": "pay_6bdbdbef69584c",
+      "order_id": "order_a7811352468843",
+      "customer_id": "cust_0112",
+      "customer_opted_out": false,
+      "amount": 6983.27,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_70af0b276d30",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T17:01:53.129874",
+    "payload": {
+      "payment_id": "pay_adae0c41b1d74c",
+      "order_id": "order_c80c5934773b47",
+      "customer_id": "cust_0085",
+      "customer_opted_out": false,
+      "amount": 2989.26,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_777768cbc05a",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T14:39:53.129874",
+    "payload": {
+      "payment_id": "pay_b3ff37e9f35947",
+      "order_id": "order_a38160e77b1a48",
+      "customer_id": "cust_0070",
+      "customer_opted_out": false,
+      "amount": 14255.43,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 2
+    }
+  },
+  {
+    "event_id": "evt_a6c9f4108501",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T20:38:53.129874",
+    "payload": {
+      "payment_id": "pay_91bf0a6336df48",
+      "order_id": "order_fd7c0310d32a4c",
+      "customer_id": "cust_0029",
+      "customer_opted_out": false,
+      "amount": 27531.04,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_d5550600dc04",
+    "event": "payment.failed",
+    "created_at": "2026-08-25T19:53:53.129874",
+    "payload": {
+      "payment_id": "pay_3b243d816f9f44",
+      "order_id": "order_6937f786fffd4b",
+      "customer_id": "cust_0045",
+      "customer_opted_out": false,
+      "amount": 31779.27,
+      "currency": "INR",
+      "raw_error_description": "Customer did not complete 3DS/OTP authentication in time",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_1e62acf9237c",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T07:31:53.129874",
+    "payload": {
+      "payment_id": "pay_5b0877993e6a45",
+      "order_id": "order_3b02909b649442",
+      "customer_id": "cust_0105",
+      "customer_opted_out": false,
+      "amount": 13092.25,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_9ca46c26cbdb",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T14:06:53.129874",
+    "payload": {
+      "payment_id": "pay_d53f11ebf1b74c",
+      "order_id": "order_ba144fb84efb4b",
+      "customer_id": "cust_0119",
+      "customer_opted_out": false,
+      "amount": 13211.57,
+      "currency": "INR",
+      "raw_error_description": "OTP validation timed out",
+      "_ground_truth_reason": "otp_timeout",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_4a9c78612c8f",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T00:22:53.129874",
+    "payload": {
+      "payment_id": "pay_ec86ddba348349",
+      "order_id": "order_c3f7113f0a424c",
+      "customer_id": "cust_0120",
+      "customer_opted_out": false,
+      "amount": 33680.51,
+      "currency": "INR",
+      "raw_error_description": "Expiry date on card has passed",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 1
+    }
+  },
+  {
+    "event_id": "evt_5888c4cb055b",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T04:17:53.129874",
+    "payload": {
+      "payment_id": "pay_f2902ef35a8444",
+      "order_id": "order_b641d588d36145",
+      "customer_id": "cust_0007",
+      "customer_opted_out": false,
+      "amount": 6348.97,
+      "currency": "INR",
+      "raw_error_description": "Card verification failed - invalid CVV",
+      "_ground_truth_reason": "invalid_card",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_c22ba47acae4",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T16:18:53.129874",
+    "payload": {
+      "payment_id": "pay_64d1e456bd464e",
+      "order_id": "order_0a0d75b8a7f340",
+      "customer_id": "cust_0092",
+      "customer_opted_out": false,
+      "amount": 10309.32,
+      "currency": "INR",
+      "raw_error_description": "Card blocked by issuer",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 0
+    }
+  },
+  {
+    "event_id": "evt_1d0c89ff4243",
+    "event": "payment.failed",
+    "created_at": "2026-08-27T15:50:53.129874",
+    "payload": {
+      "payment_id": "pay_c3f08e9bdc9244",
+      "order_id": "order_0e1d54f8400d45",
+      "customer_id": "cust_0053",
+      "customer_opted_out": false,
+      "amount": 30717.08,
+      "currency": "INR",
+      "raw_error_description": "Card has expired",
+      "_ground_truth_reason": "card_expired",
+      "prior_attempts": 3
+    }
+  },
+  {
+    "event_id": "evt_eb3c46acaa6f",
+    "event": "payment.failed",
+    "created_at": "2026-08-26T17:32:53.129874",
+    "payload": {
+      "payment_id": "pay_599889d5b17340",
+      "order_id": "order_1bac52d9f3044f",
+      "customer_id": "cust_0037",
+      "customer_opted_out": false,
+      "amount": 21589.17,
+      "currency": "INR",
+      "raw_error_description": "Transaction declined by card issuer, no reason provided",
+      "_ground_truth_reason": "issuer_declined",
+      "prior_attempts": 3
+    }
+  }
+]

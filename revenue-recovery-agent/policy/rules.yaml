@@ -1,0 +1,60 @@
+# Recovery policy — one entry per diagnosed reason code.
+# This table is the "brain" behind compliant, reason-aware recovery.
+# action types: retry_silent | retry_with_nudge | request_update | escalate | stop_no_recovery
+
+reasons:
+  insufficient_funds:
+    action: retry_with_nudge
+    retry_delay_hours: 24        # give the customer time to top up
+    max_attempts: 3
+    channel: sms
+    message_template: "Your payment of {amount} couldn't go through (low balance). We'll retry tomorrow — or pay now: {link}"
+    recovery_probability: 0.55   # used only by the simulator to model real-world outcomes
+
+  bank_downtime:
+    action: retry_silent         # not the customer's fault, don't bother them
+    retry_delay_hours: 0.5
+    max_attempts: 5
+    channel: none
+    message_template: null
+    recovery_probability: 0.80
+
+  otp_timeout:
+    action: retry_with_nudge
+    retry_delay_hours: 0
+    max_attempts: 2
+    channel: sms
+    message_template: "Payment attempt timed out. Please try again: {link}"
+    recovery_probability: 0.60
+
+  card_expired:
+    action: request_update
+    retry_delay_hours: 0
+    max_attempts: 2
+    channel: email
+    message_template: "Your card has expired. Update it to complete your payment: {link}"
+    recovery_probability: 0.35
+
+  invalid_card:
+    action: request_update
+    retry_delay_hours: 0
+    max_attempts: 1
+    channel: sms
+    message_template: "That card couldn't be used. Try another payment method: {link}"
+    recovery_probability: 0.30
+
+  issuer_declined:
+    action: escalate
+    retry_delay_hours: 0
+    max_attempts: 1
+    channel: email
+    message_template: "Your bank declined this payment. Contact your bank, or try another card: {link}"
+    recovery_probability: 0.20
+
+# Global compliance / stopping constraints — apply on top of the per-reason rules above.
+global_constraints:
+  quiet_hours_start: 21          # 9 PM
+  quiet_hours_end: 9             # 9 AM — no customer contact in this window
+  max_total_contact_attempts: 3  # hard cap across the whole case, regardless of reason
+  respect_opt_out: true          # never contact a customer who has opted out
+  stop_after_days_open: 5        # give up on a case after this many days, no matter what
