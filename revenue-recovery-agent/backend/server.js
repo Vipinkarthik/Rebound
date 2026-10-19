@@ -11,6 +11,12 @@ const summaryRoutes = require("./routes/summaryRoutes");
 const auditRoutes = require("./routes/auditRoutes");
 const policyRoutes = require("./routes/policyRoutes");
 const explainRoutes = require("./routes/explainRoutes");
+<<<<<<< HEAD
+=======
+const webhookRoutes = require("./routes/webhookRoutes");
+const cronRoutes = require("./routes/cronRoutes");
+const { startDeferredQueueScheduler } = require("./services/deferredQueueWorker");
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 
 const app = express();
 
@@ -35,7 +41,15 @@ app.use(cors({
   credentials: true
 }));
 
+<<<<<<< HEAD
 app.use(express.json());
+=======
+app.use(express.json({
+  verify: (req, res, buf) => {
+    req.rawBody = buf;
+  }
+}));
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 app.use(requestLogger);
 
 // API Routes
@@ -44,6 +58,11 @@ app.use("/api", summaryRoutes);
 app.use("/api", auditRoutes);
 app.use("/api", policyRoutes);
 app.use("/api", explainRoutes);
+<<<<<<< HEAD
+=======
+app.use("/api", webhookRoutes);
+app.use("/api", cronRoutes);
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 
 // Health check endpoint
 app.get("/health", (req, res) => {
@@ -56,4 +75,9 @@ app.use(errorHandler);
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+<<<<<<< HEAD
+=======
+  // Start background queue scheduler for deferred recovery cases
+  startDeferredQueueScheduler(5);
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 });

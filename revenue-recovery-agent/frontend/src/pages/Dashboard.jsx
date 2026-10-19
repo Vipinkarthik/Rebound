@@ -7,7 +7,12 @@ import {
   AlertTriangle,
   Activity,
   Zap,
+<<<<<<< HEAD
   CheckCircle
+=======
+  CheckCircle,
+  Radio
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 } from 'lucide-react';
 
 import MetricCard from '../components/MetricCard';
@@ -17,13 +22,22 @@ import StoppedCasesPanel from '../components/StoppedCasesPanel';
 import AuditLogTable from '../components/AuditLogTable';
 import PolicyEditor from '../components/PolicyEditor';
 import RunSimulationButton from '../components/RunSimulationButton';
+<<<<<<< HEAD
+=======
+import WebhookSimulatorModal from '../components/WebhookSimulatorModal';
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 
 import {
   getSummary,
   simulateEvents,
   getAuditLogs,
   getPolicies,
+<<<<<<< HEAD
   updatePolicyRule
+=======
+  updatePolicyRule,
+  processDeferredQueue
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 } from '../api/client';
 
 export default function Dashboard() {
@@ -34,6 +48,11 @@ export default function Dashboard() {
   const [policies, setPolicies] = useState({ rules: [], global_constraints: {} });
 
   const [isSimulating, setIsSimulating] = useState(false);
+<<<<<<< HEAD
+=======
+  const [isProcessingDeferred, setIsProcessingDeferred] = useState(false);
+  const [isWebhookModalOpen, setIsWebhookModalOpen] = useState(false);
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [toastMessage, setToastMessage] = useState(null);
@@ -108,6 +127,24 @@ export default function Dashboard() {
     }
   };
 
+<<<<<<< HEAD
+=======
+  const handleProcessDeferred = async () => {
+    setIsProcessingDeferred(true);
+    setError(null);
+    try {
+      const res = await processDeferredQueue();
+      showToast(res.details || `Processed ${res.processed_count} deferred cases!`);
+      await fetchDashboardData();
+    } catch (err) {
+      console.error('Error processing deferred queue:', err);
+      setError(err.response?.data?.error || err.message || 'Failed to process deferred queue.');
+    } finally {
+      setIsProcessingDeferred(false);
+    }
+  };
+
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
   const handlePolicyUpdate = async (reasonCode, updateData) => {
     const updatedRule = await updatePolicyRule(reasonCode, updateData);
     setPolicies((prev) => ({
@@ -163,6 +200,18 @@ export default function Dashboard() {
           </div>
 
           <div className="flex items-center gap-3 self-end md:self-auto">
+<<<<<<< HEAD
+=======
+            {/* Live Webhook Simulator Trigger */}
+            <button
+              onClick={() => setIsWebhookModalOpen(true)}
+              className="flex items-center gap-2 px-3.5 py-2.5 bg-slate-800 hover:bg-slate-700 text-indigo-300 border border-slate-700 rounded-xl text-xs font-bold transition-all shadow-md"
+            >
+              <Radio className="w-4 h-4 text-indigo-400 animate-pulse" />
+              Simulate Webhook
+            </button>
+
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
             <RunSimulationButton onRun={handleRunSimulation} isLoading={isSimulating} />
           </div>
         </div>
@@ -240,8 +289,18 @@ export default function Dashboard() {
         {/* 2. Chart Section */}
         <RecoveryByReasonChart byReasonData={agentSummary?.by_reason_code || {}} />
 
+<<<<<<< HEAD
         {/* 3. Stopped Cases Highlight Panel */}
         <StoppedCasesPanel stoppedCases={stoppedCases} />
+=======
+        {/* 3. Stopped Cases Highlight Panel & Deferred Queue Processing */}
+        <StoppedCasesPanel
+          stoppedCases={stoppedCases}
+          deferredCount={agentSummary?.cases_deferred_quiet_hours || 0}
+          onProcessDeferred={handleProcessDeferred}
+          isProcessingDeferred={isProcessingDeferred}
+        />
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 
         {/* 4. Audit Log Table */}
         <AuditLogTable
@@ -267,6 +326,19 @@ export default function Dashboard() {
           onPolicyUpdate={handlePolicyUpdate}
         />
       </main>
+<<<<<<< HEAD
+=======
+
+      {/* Webhook Simulator Modal */}
+      <WebhookSimulatorModal
+        isOpen={isWebhookModalOpen}
+        onClose={() => setIsWebhookModalOpen(false)}
+        onSuccess={() => {
+          fetchDashboardData();
+          showToast('Simulated webhook ingested and processed live!');
+        }}
+      />
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
     </div>
   );
 }

@@ -6,6 +6,10 @@
 
 const { callLLM } = require("../services/llmClient");
 const { createPaymentLink } = require("../services/razorpayClient");
+<<<<<<< HEAD
+=======
+const { sendOutboundNotification } = require("../services/notificationService");
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 
 async function execute(decision, event) {
   const amount = event.amount !== undefined ? event.amount : (event.payload ? event.payload.amount : 0);
@@ -53,11 +57,30 @@ Include the amount (${formattedAmount}) and payment link (${paymentLink}). Keep 
     }
   }
 
+<<<<<<< HEAD
   const prob = decision.recovery_probability !== undefined ? decision.recovery_probability : 0;
   const recovered = Math.random() < prob;
 
   const finalMessage = personalizedMessage || templateMessage;
 
+=======
+  const finalMessage = personalizedMessage || templateMessage;
+  let dispatchResult = null;
+
+  if (channel && channel !== "none" && finalMessage) {
+    dispatchResult = await sendOutboundNotification({
+      channel,
+      recipient: event.customer_contact || event.customer_email,
+      message: finalMessage,
+      paymentLink,
+      customerId: event.customer_id
+    });
+  }
+
+  const prob = decision.recovery_probability !== undefined ? decision.recovery_probability : 0;
+  const recovered = Math.random() < prob;
+
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
   return {
     outcome: recovered ? "recovered" : "attempted_not_recovered",
     amount_recovered: recovered ? amount : 0.0,
@@ -66,7 +89,13 @@ Include the amount (${formattedAmount}) and payment link (${paymentLink}). Keep 
     template_message: templateMessage,
     personalized_message: personalizedMessage,
     payment_link: paymentLink,
+<<<<<<< HEAD
     detail: `Action=${decision.action} via ${channel || "system"}`
+=======
+    dispatch_status: dispatchResult?.status || "not_applicable",
+    dispatch_recipient: dispatchResult?.recipient || null,
+    detail: `Action=${decision.action} via ${channel || "system"}${dispatchResult?.status ? ` (${dispatchResult.status})` : ""}`
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
   };
 }
 

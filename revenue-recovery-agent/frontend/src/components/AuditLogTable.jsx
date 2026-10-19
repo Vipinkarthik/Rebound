@@ -284,9 +284,22 @@ export default function AuditLogTable({
                             {/* Show Personalized Outreach Copy if available */}
                             {row.result?.message_sent && (
                               <div className="mt-3 pt-3 border-t border-slate-800 text-xs">
+<<<<<<< HEAD
                                 <div className="text-[11px] font-semibold text-slate-400 flex items-center gap-1.5 mb-1">
                                   <MessageSquareText className="w-3.5 h-3.5 text-emerald-400" />
                                   Customer Outreach Message Sent ({row.result.channel_used?.toUpperCase()}):
+=======
+                                <div className="text-[11px] font-semibold text-slate-400 flex items-center justify-between gap-1.5 mb-1">
+                                  <div className="flex items-center gap-1.5">
+                                    <MessageSquareText className="w-3.5 h-3.5 text-emerald-400" />
+                                    Customer Outreach Message ({row.result.channel_used?.toUpperCase()}):
+                                  </div>
+                                  {row.result.dispatch_status && row.result.dispatch_status !== 'not_applicable' && (
+                                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">
+                                      {row.result.dispatch_status.toUpperCase()} {row.result.dispatch_recipient ? `to ${row.result.dispatch_recipient}` : ''}
+                                    </span>
+                                  )}
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
                                 </div>
                                 <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 font-mono text-[11px] text-emerald-300">
                                   "{row.result.message_sent}"

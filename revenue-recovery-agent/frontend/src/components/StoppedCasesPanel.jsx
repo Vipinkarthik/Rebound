@@ -1,5 +1,17 @@
 import React from 'react';
+<<<<<<< HEAD
 import { ShieldAlert, UserX, AlertOctagon, Hash } from 'lucide-react';
+=======
+import {
+  ShieldAlert,
+  UserX,
+  AlertOctagon,
+  Hash,
+  Clock,
+  RefreshCw,
+  Loader2
+} from 'lucide-react';
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 
 const WHY_CONFIG = {
   customer_opted_out: {
@@ -22,6 +34,7 @@ const WHY_CONFIG = {
   }
 };
 
+<<<<<<< HEAD
 export default function StoppedCasesPanel({ stoppedCases = [] }) {
   return (
     <div className="p-6 bg-slate-900/90 rounded-2xl border border-slate-800 backdrop-blur-md">
@@ -30,14 +43,53 @@ export default function StoppedCasesPanel({ stoppedCases = [] }) {
           <h3 className="text-base font-bold text-slate-100 flex items-center gap-2">
             <ShieldAlert className="w-5 h-5 text-slate-400" />
             Compliance Restraint Log — Stopped Cases Highlight
+=======
+export default function StoppedCasesPanel({
+  stoppedCases = [],
+  deferredCount = 0,
+  onProcessDeferred,
+  isProcessingDeferred = false
+}) {
+  return (
+    <div className="p-6 bg-slate-900/90 rounded-2xl border border-slate-800 backdrop-blur-md space-y-5">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h3 className="text-base font-bold text-slate-100 flex items-center gap-2">
+            <ShieldAlert className="w-5 h-5 text-slate-400" />
+            Compliance Restraint Log & Deferred Queue
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
           </h3>
           <p className="text-xs text-slate-400 mt-0.5">
             Demonstrating AI agent restraint: Halting outreach to respect privacy & global compliance policy limits
           </p>
         </div>
+<<<<<<< HEAD
         <span className="text-xs px-3 py-1 bg-slate-800 border border-slate-700 text-slate-300 rounded-full font-medium self-start sm:self-auto">
           {stoppedCases.length} Exemplar Cases Highlighted
         </span>
+=======
+
+        <div className="flex items-center gap-2.5 flex-wrap sm:flex-nowrap">
+          {onProcessDeferred && (
+            <button
+              onClick={onProcessDeferred}
+              disabled={isProcessingDeferred || deferredCount === 0}
+              className="flex items-center gap-2 px-3.5 py-1.5 bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-xl text-xs font-semibold disabled:opacity-40 transition-all cursor-pointer disabled:cursor-not-allowed"
+            >
+              {isProcessingDeferred ? (
+                <Loader2 className="w-3.5 h-3.5 animate-spin" />
+              ) : (
+                <RefreshCw className="w-3.5 h-3.5" />
+              )}
+              Process Deferred Queue ({deferredCount})
+            </button>
+          )}
+
+          <span className="text-xs px-3 py-1 bg-slate-800 border border-slate-700 text-slate-300 rounded-full font-medium">
+            {stoppedCases.length} Restraint Exemplars
+          </span>
+        </div>
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
       </div>
 
       {stoppedCases.length === 0 ? (
@@ -45,7 +97,11 @@ export default function StoppedCasesPanel({ stoppedCases = [] }) {
           No compliance-stopped cases found in current run batch.
         </div>
       ) : (
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
           {stoppedCases.map((item, idx) => {
             const whyInfo = WHY_CONFIG[item.decision?.why] || {
               label: item.decision?.why || 'Compliance Stop',

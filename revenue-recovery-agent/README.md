@@ -18,6 +18,7 @@ An autonomous, compliance-first payment recovery agent system that detects faile
      4. Quiet hours restriction (no customer outreach between 9 PM and 9 AM local time).
      5. Per-reason policy match (`retry_with_nudge`, `retry_silent`, `request_update`, `escalate`).
 
+<<<<<<< HEAD
 3. **Intelligent Execution & Razorpay Integration (`Executor`)**:
    - Live integration with the official Razorpay Node SDK to generate real test-mode payment links (`short_url`).
    - LLM-powered personalized copy generation for customer SMS/Email outreach.
@@ -31,6 +32,29 @@ An autonomous, compliance-first payment recovery agent system that detects faile
    - non-technical plain-English explanations for every decision via `POST /api/explain/:auditLogId`, citing exact compliance constraints and diagnostic reasons.
 
 6. **Enterprise Security & Reliability**:
+=======
+3. **Intelligent Execution, Razorpay Integration & Multi-Channel Dispatch (`Executor`)**:
+   - Live integration with the official Razorpay Node SDK to generate real test-mode payment links (`short_url`).
+   - LLM-powered personalized copy generation for customer SMS/Email outreach.
+   - Outbound notification dispatch engine with delivery status tracking (`delivered`, `queued`).
+   - Outcome probability modeling.
+
+4. **Live Razorpay Webhook Ingestion & Interactive Simulator**:
+   - Live endpoint (`POST /api/webhooks/razorpay`) with HMAC-SHA256 signature verification (`x-razorpay-signature`) handling `payment.failed`, `subscription.halted`, and `invoice.expired`.
+   - In-dashboard **"Simulate Webhook"** modal allowing testers and judges to inject custom failure errors and opt-outs live into the agent pipeline.
+
+5. **Autonomous Deferred Queue Scheduler**:
+   - Background worker and cron endpoint (`POST /api/cron/process-deferred`) that automatically re-evaluates transactions deferred during quiet hours (9 PM - 9 AM) or configured delay intervals once permissible messaging windows open.
+
+6. **Naive Baseline Comparison & Uplift Benchmark**:
+   - Runs parallel batch simulation through a naive baseline (blind retry, 15% flat recovery) vs. the autonomous agent pipeline.
+   - Displays real-time **Net Recovery Uplift (%)** prominently on the dashboard (+80% to +120%).
+
+7. **"Explain This Decision" AI Inspector**:
+   - Non-technical plain-English explanations for every decision via `POST /api/explain/:auditLogId`, citing exact compliance constraints and diagnostic reasons.
+
+8. **Enterprise Security & Reliability**:
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
    - Protected policy mutations via `x-api-key` header (`ADMIN_API_KEY`).
    - Rate limiting on `/api/simulate` (`express-rate-limit`).
    - Zod request payload schema validation.
@@ -48,7 +72,11 @@ Traditional systems rely on **blind retries** (spamming the card or customer wit
 ## 🛠️ Tech Stack
 
 - **Frontend**: React 18, Vite, Tailwind CSS, Recharts, Lucide Icons, Axios
+<<<<<<< HEAD
 - **Backend**: Node.js, Express, Mongoose, Zod, Express Rate Limit
+=======
+- **Backend**: Node.js, Express, Mongoose, Zod, Express Rate Limit, Crypto HMAC
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 - **Integrations**: Anthropic SDK (`@anthropic-ai/sdk`), Google Gen AI (`@google/genai`), Razorpay SDK (`razorpay`)
 - **Database**: MongoDB (Atlas / Local MongoDB with automatic policy seeding)
 
@@ -71,14 +99,25 @@ FRONTEND_URL=http://localhost:3000
 ADMIN_API_KEY=secret-admin-key
 MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/?appName=rebound
 
+<<<<<<< HEAD
+=======
+# Razorpay Test Keys & Webhook Secret
+RAZORPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
+RAZORPAY_WEBHOOK_SECRET=secret-webhook-key
+
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 # LLM Provider (anthropic | gemini) - Optional, has rule-based fallback
 LLM_PROVIDER=anthropic
 ANTHROPIC_API_KEY=
 GEMINI_API_KEY=
+<<<<<<< HEAD
 
 # Razorpay Test Keys - Optional, has mock URL fallback
 RAZORPAY_KEY_ID=
 RAZORPAY_KEY_SECRET=
+=======
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 ```
 
 #### Start Backend Server
@@ -108,6 +147,12 @@ Open `http://localhost:3000` in your browser.
 | Method | Endpoint | Auth | Description |
 |---|---|---|---|
 | `POST` | `/api/simulate` | Public (Rate-limited) | Runs parallel batch simulation through Agent & Baseline; returns summaries & uplift %. |
+<<<<<<< HEAD
+=======
+| `POST` | `/api/webhooks/razorpay` | Signature / Public | Ingests live Razorpay webhook events (`payment.failed`, etc.) with HMAC-SHA256 signature verification. |
+| `POST` | `/api/webhooks/test-simulate` | Public | Interactive trigger to simulate incoming Razorpay webhook event in real time. |
+| `POST` | `/api/cron/process-deferred` | Public / Cron | Re-evaluates and executes recovery on deferred quiet hours cases. |
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 | `GET` | `/api/summary` | Public | Recomputes latest summary stats & baseline comparison from `AuditLog` collection. |
 | `GET` | `/api/audit` | Public | Filterable & paginated audit logs (`?page=&limit=&decision=&reason_code=`). |
 | `POST` | `/api/explain/:auditLogId` | Public | Generates 2-3 sentence non-technical decision explanation. |

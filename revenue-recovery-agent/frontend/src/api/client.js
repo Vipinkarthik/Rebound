@@ -53,4 +53,17 @@ export const explainDecision = async (auditLogId) => {
   return response.data;
 };
 
+<<<<<<< HEAD
+=======
+export const triggerSimulatedWebhook = async (payload) => {
+  const response = await api.post('/webhooks/test-simulate', payload);
+  return response.data;
+};
+
+export const processDeferredQueue = async () => {
+  const response = await api.post('/cron/process-deferred');
+  return response.data;
+};
+
+>>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
 export default api;
