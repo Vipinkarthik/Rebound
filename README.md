@@ -1,289 +1,206 @@
-<<<<<<< HEAD
-# Revenue Recovery Agent — Full-Stack Autonomous Dashboard
+# Rebound — Compliance-First AI Agent for Payment Failure Recovery
 
-An autonomous, compliance-first payment recovery agent system that detects failed payments, diagnoses root causes from messy gateway error strings, enforces strict compliance constraints (quiet hours, opt-outs, attempt caps), generates dynamic outreach copy with Razorpay payment links, and provides real-time auditability and parallel baseline comparisons.
+> Built for the Razorpay Hackathon, Track 03: AI Revenue Recovery.
 
----
+Rebound is an agent pipeline that detects failed payments, works out *why* they failed, decides whether it is allowed to act, executes the right recovery action, and records every decision in an audit trail. It is built around one idea: recovering revenue responsibly means knowing when to act, and when to stop.
 
-## 🌟 Key Features
 
-1. **Root-Cause Aware Diagnosis (`Diagnoser`)**:
-   - Classifies raw gateway errors into structured reason codes (`insufficient_funds`, `bank_downtime`, `otp_timeout`, `card_expired`, `invalid_card`, `issuer_declined`).
-   - Hybrid pipeline: High-speed keyword matching with automatic LLM fallback (Claude 3.5 Sonnet / Gemini 2.5) for ambiguous or novel errors, logging `diagnosed_by: "keyword" | "llm"`.
+## The problem
 
-2. **Compliance-First Strategy Engine (`Strategist`)**:
-   - **Restraint as a Feature**: Compliance guardrails strictly veto and prioritize customer safety before any retry action is allowed:
-     1. Customer opt-out check (TCPA/DNC compliance).
-     2. Global hard contact cap (max 3 contact attempts across case history).
-     3. Reason-specific max attempt limits.
-     4. Quiet hours restriction (no customer outreach between 9 PM and 9 AM local time).
-     5. Per-reason policy match (`retry_with_nudge`, `retry_silent`, `request_update`, `escalate`).
+When a payment fails, most businesses retry blindly or send the same reminder to everyone. A bank outage, an expired card and a low balance each need a different response, so blind retries waste recoverable revenue. They also create compliance risk: messages at night, ignored opt-outs, and no rule for when to stop.
 
-3. **Intelligent Execution & Razorpay Integration (`Executor`)**:
-   - Live integration with the official Razorpay Node SDK to generate real test-mode payment links (`short_url`).
-   - LLM-powered personalized copy generation for customer SMS/Email outreach.
-   - Outcome probability modeling.
-
-4. **Naive Baseline Comparison & Uplift Benchmark**:
-   - Runs parallel batch simulation through a naive baseline (blind retry, 15% flat recovery) vs. the autonomous agent pipeline.
-   - Displays real-time **Net Recovery Uplift (%)** prominently on the dashboard.
-
-5. **"Explain This Decision" AI Inspector**:
-   - non-technical plain-English explanations for every decision via `POST /api/explain/:auditLogId`, citing exact compliance constraints and diagnostic reasons.
-
-6. **Enterprise Security & Reliability**:
-   - Protected policy mutations via `x-api-key` header (`ADMIN_API_KEY`).
-   - Rate limiting on `/api/simulate` (`express-rate-limit`).
-   - Zod request payload schema validation.
-
----
-
-## 📊 How This Differs From a Naive Approach
-
-Traditional systems rely on **blind retries** (spamming the card or customer with generic SMS/emails repeatedly). This produces low recovery (~15%), annoys customers, and violates TCPA / quiet hours regulations.
-
-**Revenue Recovery Agent** diagnoses the specific reason (e.g. low balance vs. bank downtime) and enforces strict compliance rules first (never messaging during 9PM-9AM quiet hours or contacting opted-out users). In simulation benchmarks, this root-cause aware approach yields a **+80% to +120% Net Recovery Uplift** over naive retries while eliminating customer spam complaints.
-
----
-
-## 🛠️ Tech Stack
-
-- **Frontend**: React 18, Vite, Tailwind CSS, Recharts, Lucide Icons, Axios
-- **Backend**: Node.js, Express, Mongoose, Zod, Express Rate Limit
-- **Integrations**: Anthropic SDK (`@anthropic-ai/sdk`), Google Gen AI (`@google/genai`), Razorpay SDK (`razorpay`)
-- **Database**: MongoDB (Atlas / Local MongoDB with automatic policy seeding)
-
----
-
-## 🚀 Quickstart & Setup
-
-### 1. Backend Setup
-
-```bash
-cd backend
-npm install
-```
-
-#### Environment Variables (`backend/.env`)
-
-```env
-PORT=5000
-FRONTEND_URL=http://localhost:3000
-ADMIN_API_KEY=secret-admin-key
-MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/?appName=rebound
-
-# LLM Provider (anthropic | gemini) - Optional, has rule-based fallback
-LLM_PROVIDER=anthropic
-ANTHROPIC_API_KEY=
-GEMINI_API_KEY=
-
-# Razorpay Test Keys - Optional, has mock URL fallback
-RAZORPAY_KEY_ID=
-RAZORPAY_KEY_SECRET=
-```
-
-#### Start Backend Server
-
-```bash
-npm run dev
-=======
-# Smart Payment Recovery Agent (Rebound)
-### Razorpay Hackathon Autonomous Agent System
-
-An autonomous, root-cause-aware, compliance-first payment recovery agent pipeline built with **Node.js, Express, React, Vite, MongoDB, Razorpay SDK, and Generative AI (Claude & Gemini)**.
-
-Unlike naive payment recovery scripts that blindly retry every failed charge, this agent diagnoses *why* the transaction failed, enforces strict regulatory compliance constraints (Quiet Hours 9 PM – 9 AM, Opt-Outs, Attempt Caps), generates personalized outreach copy with real **Razorpay Payment Links**, and calculates a **+80% to +120% Net Recovery Uplift** over blind retry baselines.
-
----
-
-## 🌟 Architecture & The Multi-Agent Pipeline
+## How Rebound works
 
 ```
-                       [Incoming Payment Failure]
-                     (Live Webhook or Batch Stream)
-                                   │
-                                   ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ 1. Diagnoser Agent (agents/diagnoser.js)                               │
-│    • High-speed keyword rules + LLM fallback (Claude / Gemini)         │
-│    • Categorizes raw gateway errors into 6 structured reason codes     │
-└──────────────────────────────────┬─────────────────────────────────────┘
-                                   │
-                                   ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ 2. Strategist Agent (agents/strategist.js)                             │
-│    • COMPLIANCE VETO FIRST: Opt-out check, 3-attempt hard cap,         │
-│      Quiet Hours (9 PM - 9 AM local time)                              │
-│    • Applies per-reason policy: Action, Channel, Delay, Probability    │
-└──────────────────────────────────┬─────────────────────────────────────┘
-                                   │
-                                   ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ 3. Executor Agent (agents/executor.js)                                 │
-│    • Creates live Razorpay Payment Links (razorpay SDK short_url)      │
-│    • LLM drafts tailored, empathetic outreach copy (SMS / Email)       │
-│    • Outbound dispatch service with status tracking (delivered/queued) │
-└──────────────────────────────────┬─────────────────────────────────────┘
-                                   │
-             ┌─────────────────────┴─────────────────────┐
-             ▼                                           ▼
-┌───────────────────────────────┐           ┌────────────────────────────┐
-│ 4. Deferred Queue Worker      │           │ 5. Naive Baseline Agent    │
-│    • Automatic scheduler      │           │    • Blind retry benchmark │
-│    • Re-awakens cases after   │           │    • Computes real-time    │
-│      quiet hours / delay      │           │      Net Recovery Uplift % │
-└───────────────────────────────┘           └────────────────────────────┘
-                                   │
-                                   ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ 6. Full-Stack Operational Dashboard (frontend/)                        │
-│    • Net Uplift Benchmark Card (+80% to +120% boost)                  │
-│    • Real-time KPIs: At Risk, Recovered, Recovery Rate, Stopped Cases │
-│    • Interactive "Simulate Live Webhook" trigger modal                 │
-│    • "Explain This Decision" AI compliance inspector                   │
-│    • Live In-Dashboard Policy Rule & Constraint Editor                 │
-└────────────────────────────────────────────────────────────────────────┘
->>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
+Razorpay payment.failed webhook (HMAC-verified)  /  simulated event stream
+                            │
+                            ▼
+  1. DIAGNOSER   raw gateway error → one of 6 reason codes
+                 (keyword rules first, LLM fallback when confidence is low)
+                            │
+                            ▼
+  2. STRATEGIST  compliance checks FIRST, in strict order:
+                 opt-out → global contact cap → per-reason cap → quiet hours
+                 then the per-reason recovery policy
+                 → decision: ACT / DEFER / STOP, with a recorded reason
+                            │
+                            ▼
+  3. EXECUTOR    creates a Razorpay test-mode payment link,
+                 drafts the customer message, dispatches (stubbed), records outcome
+                            │
+                            ▼
+  4. AUDIT LOG   one record per case: diagnosis → decision → outcome
+                 plus a plain-English "Explain" for any decision
+
+  Side workers:  Deferred-queue worker re-evaluates cases held by quiet hours
+                 Naive baseline runs the same events as a blind 15% retry
 ```
+
+**Design principle:** compliance is deterministic code that runs first and can veto any action. The LLM is used only where judgment helps (classifying ambiguous errors, drafting message wording, explaining decisions), and every LLM step has a rule-based fallback, so the model can never override a compliance rule.
+
+### Reason codes and default policy
+
+| Reason code | Action | Channel | Retry delay | Max attempts |
+|---|---|---|---|---|
+| `bank_downtime` | Silent retry | none | 0.5 h | 5 |
+| `insufficient_funds` | Retry with nudge | SMS | 24 h | 3 |
+| `otp_timeout` | Retry with nudge | SMS | 0 h | 2 |
+| `card_expired` | Request card update | Email | 0 h | 2 |
+| `invalid_card` | Request card update | SMS | 0 h | 1 |
+| `issuer_declined` | Escalate | Email | 0 h | 1 |
+
+Global limits (editable live): quiet hours 9 PM – 9 AM, 3 total contact attempts, opt-outs respected, case expiry 5 days.
 
 ---
 
-<<<<<<< HEAD
-### 2. Frontend Setup
+## Results (sample simulation run)
 
-In a separate terminal:
-
-```bash
-cd frontend
-=======
-## 🚀 Key Differentiators
-
-| Feature | Naive Blind Retry | Rebound Autonomous Agent |
+| | Rebound agent | Naive blind retry |
 |---|---|---|
-| **Root-Cause Awareness** | Ignored (Same generic message for all) | Classifies 6 reasons (`bank_downtime`, `insufficient_funds`, `otp_timeout`, `card_expired`, etc.) |
-| **Bank Downtime Handling** | Sends spam email to customer | Silent, rapid gateway retry (75-80% recovery) without bothering customer |
-| **Compliance Restraint** | Sends messages late at night (11 PM) | Enforces 9 PM–9 AM Quiet Hours; defers until morning window |
-| **Opt-Out Compliance** | Ignores opt-out requests | Immediately halts recovery to protect TCPA/DNC privacy rules |
-| **Customer Experience** | Spammy, repetitive, annoying | Polite, reason-specific copy with direct Razorpay payment links |
-| **Recovery Uplift** | ~15% flat recovery | **+80% to +120% Net Recovery Uplift** over baseline |
+| Failed payments processed | 561 | 561 |
+| Revenue at risk | ₹1.17 crore | ₹1.17 crore |
+| Recovered | ₹46.5 lakh | ₹17.6 lakh |
+| Recovery rate | 39.6% | 15% |
+| **Net uplift** | **+163.9%** | baseline |
+| Cases halted by compliance rules | 173 | n/a |
+
+> **Read this before quoting the numbers.** The agent and the baseline process the same events, but recovery outcomes are **simulated** using configurable recovery probabilities (a flat 15% for the baseline, per-reason rates for the agent, editable in the Policy Editor). The uplift therefore shows how reason-specific policies behave under those assumptions. It is not measured merchant data. Totals change with every run.
 
 ---
 
-## 📂 Project Directory Structure
+## What is real vs. simulated
+
+| Real | Simulated / stubbed |
+|---|---|
+| Razorpay webhook endpoint with HMAC-SHA256 signature verification | Failed-payment event stream and error strings |
+| Razorpay test-mode payment link creation (official SDK) | Whether a customer actually pays (probability model) |
+| Decision logic: diagnosis, compliance veto, policy engine | SMS / email / WhatsApp delivery (stubbed; ready for Twilio / SendGrid) |
+| LLM classification, message drafting and explanations (Claude / Gemini) | Customer opt-out data |
+| Audit log, live policy editing, deferred-queue worker | |
+
+Without API keys the app still runs: LLM steps fall back to rules and templates, and payment links fall back to a placeholder URL.
+
+---
+
+## Features
+
+- **Root-cause diagnosis** with keyword rules plus LLM fallback; each diagnosis is tagged `diagnosed_by: keyword | llm` with a confidence score.
+- **Compliance-first strategist** where opt-outs, contact caps and quiet hours are checked before any policy can fire.
+- **Razorpay integration** for signed webhook ingestion and test-mode Payment Links.
+- **Deferred queue:** cases held by quiet hours are re-evaluated by a background worker (every 5 minutes) or via `POST /api/cron/process-deferred`.
+- **Baseline benchmark:** the same events run through a blind-retry baseline, with uplift shown live.
+- **Explain this decision:** plain-English explanation of any audit record (`POST /api/explain/:auditLogId`).
+- **Live policy editor:** change attempt caps, delays, channels and quiet hours without a redeploy.
+- **Webhook simulator:** inject a failure from the dashboard, including an opted-out customer, to watch the pipeline decide.
+- **Security basics:** admin routes need an `x-api-key` header, rate limiting on `/api/simulate`, Zod request validation, timing-safe webhook signature comparison.
+
+---
+
+## Tech stack
+
+- **Frontend:** React 18, Vite, Tailwind CSS, Recharts, Lucide Icons, Axios
+- **Backend:** Node.js, Express, Mongoose, Zod, express-rate-limit
+- **AI / integrations:** Anthropic SDK, Google Gen AI SDK, Razorpay Node SDK
+- **Database:** MongoDB (Atlas, with local and in-memory fallbacks)
+
+---
+
+## Project structure
 
 ```
 revenue-recovery-agent/
 ├── backend/
-│   ├── agents/
-│   │   ├── diagnoser.js           # Error classifier (Keyword + LLM fallback)
-│   │   ├── strategist.js          # Compliance guardrails & policy engine
-│   │   ├── executor.js            # Razorpay links & LLM outreach copy
-│   │   └── naiveBaseline.js       # Unintelligent blind retry benchmark
-│   ├── controllers/
-│   │   ├── simulationController.js # Batch simulation runner
-│   │   ├── webhookController.js    # Live Razorpay webhook & simulator
-│   │   ├── cronController.js       # Deferred queue processor
-│   │   ├── explainController.js    # "Explain Decision" AI inspector
-│   │   └── policyController.js     # Live policy mutation API
-│   ├── services/
-│   │   ├── eventSimulator.js       # Realistic synthetic event generator
-│   │   ├── razorpayClient.js       # Official Razorpay Node SDK client
-│   │   ├── llmClient.js            # Anthropic Claude & Google Gemini client
-│   │   ├── notificationService.js  # Outbound SMS/Email dispatch service
-│   │   └── deferredQueueWorker.js  # Background scheduler for quiet hours
-│   ├── models/                    # MongoDB Mongoose schemas (AuditLog, PolicyRule)
-│   ├── routes/                    # Express REST API routes
-│   └── server.js                  # Main Express server entrypoint
-│
+│   ├── agents/          diagnoser.js · strategist.js · executor.js · naiveBaseline.js
+│   ├── controllers/     simulation · webhook · cron · explain · policy · summary · audit
+│   ├── services/        eventSimulator · razorpayClient · llmClient
+│   │                    notificationService · deferredQueueWorker
+│   ├── models/          Event · AuditLog · PolicyRule · GlobalConstraints
+│   ├── routes/  middleware/  config/  server.js
 └── frontend/
-    ├── src/
-    │   ├── api/client.js          # Axios API client
-    │   ├── components/
-    │   │   ├── BaselineComparisonCard.jsx # Net Uplift comparison
-    │   │   ├── MetricCard.jsx             # Top KPI stats
-    │   │   ├── RecoveryByReasonChart.jsx  # Recharts breakdown by reason
-    │   │   ├── StoppedCasesPanel.jsx      # Compliance restraint & deferred queue
-    │   │   ├── AuditLogTable.jsx          # Paginated audit trail with "Explain"
-    │   │   ├── PolicyEditor.jsx           # Live policy rule editor
-    │   │   ├── WebhookSimulatorModal.jsx  # Interactive live webhook injection
-    │   │   └── RunSimulationButton.jsx    # Batch simulation trigger
-    │   └── pages/
-    │       └── Dashboard.jsx              # Main application dashboard
-    └── package.json
+    └── src/
+        ├── api/client.js
+        ├── pages/Dashboard.jsx
+        └── components/  BaselineComparisonCard · MetricCard · RecoveryByReasonChart
+                         StoppedCasesPanel · AuditLogTable · PolicyEditor
+                         WebhookSimulatorModal · RunSimulationButton
 ```
 
 ---
 
-## ⚡ Quickstart
+## Quickstart
 
-### 1. Prerequisites
-- Node.js (v18+)
-- MongoDB connection string (local or MongoDB Atlas)
+**Prerequisites:** Node.js 18+, and a MongoDB connection string (Atlas or local).
 
-### 2. Start the Backend API
+### 1. Backend
 
 ```bash
-cd revenue-recovery-agent/backend
->>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
+cd backend
 npm install
-npm run dev
+cp .env.example .env     # then fill in values
+npm run dev              # http://localhost:5000
 ```
 
-<<<<<<< HEAD
-Open `http://localhost:3000` in your browser.
+`backend/.env`:
+
+```env
+PORT=5000
+FRONTEND_URL=http://localhost:3000
+ADMIN_API_KEY=<choose-a-long-random-string>
+MONGODB_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/revenue-recovery
+
+# Optional: LLM (rule-based fallback if unset)
+LLM_PROVIDER=anthropic          # anthropic | gemini
+ANTHROPIC_API_KEY=
+GEMINI_API_KEY=
+
+# Optional: Razorpay test-mode keys (placeholder link if unset)
+RAZORPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
+RAZORPAY_WEBHOOK_SECRET=
+```
+
+On first start the server seeds the default policy rules and global constraints.
+
+### 2. Frontend
+
+```bash
+cd frontend
+npm install
+cp .env.example .env     # set VITE_API_BASE_URL if the backend is not on localhost:5000
+npm run dev              # http://localhost:3000
+```
+
+### 3. Try it
+
+1. Click **Run Simulation** to process a batch and see the baseline comparison.
+2. Click **Simulate Webhook**, choose an error such as bank maintenance or insufficient funds, and watch the new row appear in the audit trail.
+3. Inject another failure with **Simulate Customer Opt-Out** ticked and see the decision come back as STOP.
+4. Click **Explain** on any audit row.
+5. Edit a rule in the **Policy Editor**, save it, and run again to see the numbers move.
 
 ---
 
-## 📖 API Endpoints Reference
+## API reference
 
 | Method | Endpoint | Auth | Description |
 |---|---|---|---|
-| `POST` | `/api/simulate` | Public (Rate-limited) | Runs parallel batch simulation through Agent & Baseline; returns summaries & uplift %. |
-| `GET` | `/api/summary` | Public | Recomputes latest summary stats & baseline comparison from `AuditLog` collection. |
-| `GET` | `/api/audit` | Public | Filterable & paginated audit logs (`?page=&limit=&decision=&reason_code=`). |
-| `POST` | `/api/explain/:auditLogId` | Public | Generates 2-3 sentence non-technical decision explanation. |
-| `GET` | `/api/policy` | Public | Returns all `PolicyRule` docs and `GlobalConstraints`. |
-| `PUT` | `/api/policy/:reason_code` | `x-api-key` Header | Updates a policy rule live. |
-| `PUT` | `/api/policy/global` | `x-api-key` Header | Updates global compliance constraints live. |
+| `POST` | `/api/simulate` | Rate-limited | Runs a batch through the agent and the baseline; returns both summaries and uplift |
+| `POST` | `/api/webhooks/razorpay` | HMAC signature | Live Razorpay webhook receiver (`payment.failed`) |
+| `POST` | `/api/webhooks/test-simulate` | none | Dashboard trigger for injecting a test webhook |
+| `POST` | `/api/cron/process-deferred` | none | Re-evaluates cases deferred by quiet hours |
+| `GET` | `/api/summary` | none | Aggregated metrics and baseline comparison |
+| `GET` | `/api/audit` | none | Paginated audit log (`?page=&limit=&decision=&reason_code=`) |
+| `POST` | `/api/explain/:auditLogId` | none | Plain-English explanation of a decision |
+| `GET` | `/api/policy` | none | Active policy rules and global constraints |
+| `PUT` | `/api/policy/:reason_code` | `x-api-key` | Update one policy rule |
+| `PUT` | `/api/policy/global` | `x-api-key` | Update global constraints |
 
 ---
 
-## 🚢 Deployment
+## Limitations and next steps
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for full deployment instructions for Render, Railway, Vercel, Netlify, and MongoDB Atlas.
-=======
-*Backend runs on `http://localhost:5000` with automatic policy seeding.*
-
-### 3. Start the Frontend Dashboard
-
-```bash
-cd revenue-recovery-agent/frontend
-npm install
-npm run dev
-```
-
-*Open `http://localhost:3000` (or `http://localhost:5173`) in your browser.*
-
----
-
-## 🌐 API Reference
-
-| Method | Endpoint | Description |
-|---|---|---|
-| `POST` | `/api/simulate` | Runs parallel batch simulation (300 events) through Agent & Baseline; returns summaries & net uplift %. |
-| `POST` | `/api/webhooks/razorpay` | Live Razorpay Webhook receiver with HMAC-SHA256 signature verification. |
-| `POST` | `/api/webhooks/test-simulate` | Interactive trigger for simulating incoming Razorpay webhooks in real-time. |
-| `POST` | `/api/cron/process-deferred` | Processes queued cases deferred during quiet hours. |
-| `GET` | `/api/summary` | Returns latest aggregated metrics, recovery rates, and baseline comparison. |
-| `GET` | `/api/audit` | Filterable, paginated audit logs (`?page=&limit=&decision=&reason_code=`). |
-| `POST` | `/api/explain/:auditLogId` | Generates plain-English decision explanations citing compliance constraints. |
-| `GET` | `/api/policy` | Fetches active policy rules and global compliance constraints. |
-| `PUT` | `/api/policy/:reason_code` | Protected live update of a policy rule (`x-api-key: secret-admin-key`). |
-| `PUT` | `/api/policy/global` | Protected live update of global compliance constraints. |
-
----
-
-## 🚢 Deployment Guide
-
-Detailed deployment instructions for **Render, Railway, Vercel, Netlify, and MongoDB Atlas** are provided in [revenue-recovery-agent/DEPLOYMENT.md](revenue-recovery-agent/DEPLOYMENT.md).
->>>>>>> ee84457 (The Recovery Agent project is completed end-to-end)
+- Recovery rates are assumptions, so the next step is replacing them with measured outcomes from real merchant data.
+- Messaging is stubbed, so the next step is wiring real SMS / email / WhatsApp providers with delivery receipts.
+- Opt-out and quiet-hour handling is a simplified model and would need to follow the applicable telecom and RBI guidelines before real use.
+- Extend the same pipeline to `subscription.halted` (failed subscriptions), overdue invoices and checkout abandonment.
+- Add authentication on the dashboard and on the remaining admin-style endpoints.
